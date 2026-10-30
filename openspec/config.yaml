@@ -1,12 +1,14 @@
-schema: spec-driven
+schema: shared-specs-only
 
 context: |
-  Shared, cross-cutting specifications for Cardigan.
-  Every spec here applies to all three platforms: backend, mobile apps, and web frontend.
-  Platform-specific behavior belongs in that platform's own spec store, never here.
+  Shared, cross-platform specifications for Cardigan (backend, mobile apps, web frontend).
+  This store only holds shared specs and their delta specs. No design or implementation work happens here.
+  Every change targets at least two platforms. Platform-specific behavior belongs in that platform's own store.
 
 rules:
   proposal:
-    - Only propose a change here if it affects all three platforms; otherwise move it to the platform's own store
+    - Keep it brief - only what changes and why, no implementation details
+    - List the target platforms (at least two)
+    - Flag breaking changes prominently when all platforms must migrate
   specs:
     - Describe shared behavior and contracts only, with no platform-specific implementation details
