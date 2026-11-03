@@ -1,7 +1,27 @@
 name: shared-specs-only
 version: 1
-description: Shared cross-platform specs only - proposal → specs (no design, no tasks)
+description: Shared cross-platform specs only - decisions → proposal → specs (no design, no tasks)
 artifacts:
+  - id: decisions
+    generates: decisions.md
+    description: Decisions settled by interviewing the user before any planning is written
+    template: decisions.md
+    instruction: |
+      Run the spec-review skill for this change. The skill interviews the user
+      in rounds with the AskUserQuestion tool, looks up facts itself, and
+      writes decisions.md only after the user has confirmed the shared
+      understanding. Do not write the file by hand and do not answer questions
+      on the user's behalf. If the spec-review skill is not available, stop
+      and tell the user instead of writing decisions.md yourself.
+
+      This store holds specs shared across platforms, so the interview settles
+      behavior and contract decisions only, never how a platform will build
+      the change. Make sure the decisions cover what the proposal needs:
+      whether the change is breaking, which platforms it targets (at least
+      two), and the observable behavior, inputs, outputs and error conditions
+      the specs will describe.
+    requires: []
+
   - id: proposal
     generates: proposal.md
     description: Short proposal stating what changes, why, and which platforms it targets
@@ -12,6 +32,10 @@ artifacts:
       This store holds specs shared across platforms. There are no
       implementation details here, so never describe how a platform will
       build the change.
+
+      Base the proposal on decisions.md. Do not introduce behavior that
+      contradicts it or that it does not cover; if something is missing,
+      stop and run the spec-review skill again for the open point.
 
       Sections:
       - **Breaking Change**: Always first. Write `Yes` or `No`. If `Yes`, start
@@ -45,7 +69,8 @@ artifacts:
       Keep the whole proposal well under one page. No Impact section, no
       implementation notes, no migration steps beyond what the Breaking Change
       section needs.
-    requires: []
+    requires:
+      - decisions
 
   - id: specs
     generates: "specs/**/*.md"
@@ -55,6 +80,11 @@ artifacts:
       Create specification files that define WHAT the system should do.
 
       A spec is a behavior contract, not an implementation plan.
+
+      Base the specs on the proposal and decisions.md. Do not introduce
+      behavior that contradicts decisions.md or that it does not cover; if
+      something is missing, stop and run the spec-review skill again for the
+      open point.
 
       Good spec content:
       - Observable behavior users or downstream systems rely on
