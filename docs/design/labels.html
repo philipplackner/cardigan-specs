@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Labels</title>
+<!--
+  Cardigan UI mockups · Labels
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Labels</h1>
+      <p>One label set for all boards, managed on its own page. Each label has a name and one of 20 colors.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html">Overview</a><a href="foundations.html">Foundations</a><a href="auth.html">Log in & register</a><a href="board-list.html">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html">Card detail</a><a href="labels.html" aria-current="page">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec">
+    <!-- ================= All sizes ================= -->
+    <div class="g-group" id="all-sizes"><h3>All sizes</h3><div class="g-row">
+
+      <!-- Screen: Labels | State: Labels | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="labels" data-state="labels" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Labels at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Back" aria-label="Back"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></span>
+                <div class="ab-title"><b>Labels</b></div><span class="ib" title="New label" aria-label="New label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>
+              </div>
+              <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                <div class="ltable">
+                  <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Labels</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: Labels | Size: tablet (834 × 1112) -->
+      <figure class="g-item" data-screen="labels" data-state="labels" data-size="tablet" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Tablet portrait · 834 Labels at full size" data-w="834" data-h="1112" data-base="0.42">
+        <div class="fr ui fr-web fr-tablet" style="width: 834px; height: 1112px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="meta">7 labels</span><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                  <div class="ltable">
+                    <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Tablet portrait · 834</span><b>Labels</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: Labels | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="labels" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Labels at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="meta">7 labels</span><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                  <div class="ltable">
+                    <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Labels</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= States &amp; dialogs ================= -->
+    <div class="g-group" id="states-dialogs"><h3>States &amp; dialogs</h3><div class="g-row">
+
+      <!-- Screen: Labels | State: Loading | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="loading" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Loading at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content">
+                  <div class="ltable">
+                    <div class="lrow">
+                      <div class="sk" style="width:10px;height:10px;border-radius:50%"></div>
+                      <div class="sk" style="width:120px;height:12px;"></div><span class="sp"></span>
+                      <div class="sk" style="width:60px;height:10px;"></div>
+                    </div>
+                    <div class="lrow">
+                      <div class="sk" style="width:10px;height:10px;border-radius:50%"></div>
+                      <div class="sk" style="width:120px;height:12px;"></div><span class="sp"></span>
+                      <div class="sk" style="width:60px;height:10px;"></div>
+                    </div>
+                    <div class="lrow">
+                      <div class="sk" style="width:10px;height:10px;border-radius:50%"></div>
+                      <div class="sk" style="width:120px;height:12px;"></div><span class="sp"></span>
+                      <div class="sk" style="width:60px;height:10px;"></div>
+                    </div>
+                    <div class="lrow">
+                      <div class="sk" style="width:10px;height:10px;border-radius:50%"></div>
+                      <div class="sk" style="width:120px;height:12px;"></div><span class="sp"></span>
+                      <div class="sk" style="width:60px;height:10px;"></div>
+                    </div>
+                    <div class="lrow">
+                      <div class="sk" style="width:10px;height:10px;border-radius:50%"></div>
+                      <div class="sk" style="width:120px;height:12px;"></div><span class="sp"></span>
+                      <div class="sk" style="width:60px;height:10px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Loading</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: No labels yet | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="no-labels-yet" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 No labels yet at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content">
+                  <div class="state">
+                    <div class="si"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg></div><h3>No labels yet</h3><p>Labels work across all your boards. Create one, then add it to cards from the card detail.</p>
+                    <div class="acts"><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>No labels yet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: No labels yet | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="labels" data-state="no-labels-yet" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 No labels yet at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Back" aria-label="Back"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></span>
+                <div class="ab-title"><b>Labels</b></div><span class="ib" title="New label" aria-label="New label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>
+              </div>
+              <div class="content">
+                <div class="state">
+                  <div class="si"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg></div><h3>No labels yet</h3><p>Labels work across all your boards. Create one, then add it to cards from the card detail.</p>
+                  <div class="acts"><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>No labels yet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: New label | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="new-label" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 New label at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="meta">7 labels</span><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                  <div class="ltable">
+                    <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>New label</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input focus"><span style="flex:1;min-width:0">backend<span class="caret"></span></span></div>
+                </div>
+                <div class="field"><label>Color</label>
+                  <div class="pal"><span class="swc" data-color="Red" style="--h:0;--s:74%" title="Red"></span><span class="swc" data-color="Orange" style="--h:22;--s:85%" title="Orange"></span><span class="swc" data-color="Amber" style="--h:38;--s:90%" title="Amber"></span><span class="swc" data-color="Yellow" style="--h:50;--s:82%" title="Yellow"></span><span class="swc" data-color="Lime" style="--h:80;--s:62%" title="Lime"></span><span class="swc" data-color="Green" style="--h:130;--s:50%" title="Green"></span><span class="swc" data-color="Emerald" style="--h:155;--s:62%" title="Emerald"></span><span class="swc" data-color="Teal" style="--h:172;--s:62%" title="Teal"></span><span class="swc" data-color="Cyan" style="--h:188;--s:72%" title="Cyan"></span><span class="swc" data-color="Sky" style="--h:200;--s:78%" title="Sky"></span><span class="swc" data-color="Blue" style="--h:218;--s:80%" title="Blue"></span><span class="swc" data-color="Indigo" style="--h:235;--s:68%" title="Indigo"></span><span class="swc on" data-color="Violet" style="--h:255;--s:70%" title="Violet"></span><span class="swc" data-color="Purple" style="--h:275;--s:62%" title="Purple"></span><span class="swc" data-color="Fuchsia" style="--h:295;--s:62%" title="Fuchsia"></span><span class="swc" data-color="Pink" style="--h:325;--s:70%" title="Pink"></span><span class="swc" data-color="Rose" style="--h:345;--s:74%" title="Rose"></span><span class="swc" data-color="Brown" style="--h:25;--s:38%" title="Brown"></span><span class="swc" data-color="Olive" style="--h:62;--s:32%" title="Olive"></span><span class="swc" data-color="Slate" style="--h:215;--s:16%" title="Slate"></span></div><span class="pal-name">Violet</span>
+                </div>
+                <div class="field"><label>Preview</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">backend</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">backend</span></div>
+                </div>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Create label</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>New label</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: New label | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="labels" data-state="new-label" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 New label at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Back" aria-label="Back"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></span>
+                <div class="ab-title"><b>Labels</b></div><span class="ib" title="New label" aria-label="New label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>
+              </div>
+              <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                <div class="ltable">
+                  <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>New label</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input focus"><span style="flex:1;min-width:0">backend<span class="caret"></span></span></div>
+                </div>
+                <div class="field"><label>Color</label>
+                  <div class="pal"><span class="swc" data-color="Red" style="--h:0;--s:74%" title="Red"></span><span class="swc" data-color="Orange" style="--h:22;--s:85%" title="Orange"></span><span class="swc" data-color="Amber" style="--h:38;--s:90%" title="Amber"></span><span class="swc" data-color="Yellow" style="--h:50;--s:82%" title="Yellow"></span><span class="swc" data-color="Lime" style="--h:80;--s:62%" title="Lime"></span><span class="swc" data-color="Green" style="--h:130;--s:50%" title="Green"></span><span class="swc" data-color="Emerald" style="--h:155;--s:62%" title="Emerald"></span><span class="swc" data-color="Teal" style="--h:172;--s:62%" title="Teal"></span><span class="swc" data-color="Cyan" style="--h:188;--s:72%" title="Cyan"></span><span class="swc" data-color="Sky" style="--h:200;--s:78%" title="Sky"></span><span class="swc" data-color="Blue" style="--h:218;--s:80%" title="Blue"></span><span class="swc" data-color="Indigo" style="--h:235;--s:68%" title="Indigo"></span><span class="swc on" data-color="Violet" style="--h:255;--s:70%" title="Violet"></span><span class="swc" data-color="Purple" style="--h:275;--s:62%" title="Purple"></span><span class="swc" data-color="Fuchsia" style="--h:295;--s:62%" title="Fuchsia"></span><span class="swc" data-color="Pink" style="--h:325;--s:70%" title="Pink"></span><span class="swc" data-color="Rose" style="--h:345;--s:74%" title="Rose"></span><span class="swc" data-color="Brown" style="--h:25;--s:38%" title="Brown"></span><span class="swc" data-color="Olive" style="--h:62;--s:32%" title="Olive"></span><span class="swc" data-color="Slate" style="--h:215;--s:16%" title="Slate"></span></div><span class="pal-name">Violet</span>
+                </div>
+                <div class="field"><label>Preview</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">backend</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">backend</span></div>
+                </div>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Create label</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>New label</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: Edit label | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="edit-label" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Edit label at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="meta">7 labels</span><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                  <div class="ltable">
+                    <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Edit label</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input"><span style="flex:1;min-width:0">bug</span></div>
+                </div>
+                <div class="field"><label>Color</label>
+                  <div class="pal"><span class="swc on" data-color="Red" style="--h:0;--s:74%" title="Red"></span><span class="swc" data-color="Orange" style="--h:22;--s:85%" title="Orange"></span><span class="swc" data-color="Amber" style="--h:38;--s:90%" title="Amber"></span><span class="swc" data-color="Yellow" style="--h:50;--s:82%" title="Yellow"></span><span class="swc" data-color="Lime" style="--h:80;--s:62%" title="Lime"></span><span class="swc" data-color="Green" style="--h:130;--s:50%" title="Green"></span><span class="swc" data-color="Emerald" style="--h:155;--s:62%" title="Emerald"></span><span class="swc" data-color="Teal" style="--h:172;--s:62%" title="Teal"></span><span class="swc" data-color="Cyan" style="--h:188;--s:72%" title="Cyan"></span><span class="swc" data-color="Sky" style="--h:200;--s:78%" title="Sky"></span><span class="swc" data-color="Blue" style="--h:218;--s:80%" title="Blue"></span><span class="swc" data-color="Indigo" style="--h:235;--s:68%" title="Indigo"></span><span class="swc" data-color="Violet" style="--h:255;--s:70%" title="Violet"></span><span class="swc" data-color="Purple" style="--h:275;--s:62%" title="Purple"></span><span class="swc" data-color="Fuchsia" style="--h:295;--s:62%" title="Fuchsia"></span><span class="swc" data-color="Pink" style="--h:325;--s:70%" title="Pink"></span><span class="swc" data-color="Rose" style="--h:345;--s:74%" title="Rose"></span><span class="swc" data-color="Brown" style="--h:25;--s:38%" title="Brown"></span><span class="swc" data-color="Olive" style="--h:62;--s:32%" title="Olive"></span><span class="swc" data-color="Slate" style="--h:215;--s:16%" title="Slate"></span></div><span class="pal-name">Red</span>
+                </div>
+                <div class="field"><label>Preview</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Red" style="--h:0;--s:74%">bug</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                </div>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Edit label</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: Delete label | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="labels" data-state="delete-label" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Delete label at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Labels</h1><span class="meta">7 labels</span><span class="sp"></span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New label</span></div>
+                <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                  <div class="ltable">
+                    <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                    <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete label “bug”?</h2><p>It will be removed from every card that uses it, on all boards. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete label</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Delete label</b></figcaption>
+      </figure>
+
+      <!-- Screen: Labels | State: Delete label | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="labels" data-state="delete-label" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Delete label at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Back" aria-label="Back"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></span>
+                <div class="ab-title"><b>Labels</b></div><span class="ib" title="New label" aria-label="New label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>
+              </div>
+              <div class="content"><p class="lhint">Labels are shared across all your boards.</p>
+                <div class="ltable">
+                  <div class="lrow"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                  <div class="lrow"><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span><span class="ib" title="Edit label" aria-label="Edit label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span class="ib" title="Delete label" aria-label="Delete label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete label “bug”?</h2><p>It will be removed from every card that uses it, on all boards. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete label</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Delete label</b></figcaption>
+      </figure>
+    </div></div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

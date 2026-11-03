@@ -1,0 +1,1633 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Card detail</title>
+<!--
+  Cardigan UI mockups · Card detail
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Card detail</h1>
+      <p>Opens as a side panel on tablet and desktop, full screen on phones. The description is plain text. Changes are saved with the Save button. To move a card, drag it on the board.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html">Overview</a><a href="foundations.html">Foundations</a><a href="auth.html">Log in & register</a><a href="board-list.html">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html" aria-current="page">Card detail</a><a href="labels.html">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec">
+    <!-- ================= All sizes ================= -->
+    <div class="g-group" id="all-sizes"><h3>All sizes</h3><div class="g-row">
+
+      <!-- Screen: Card detail | State: Card detail | Size: phone (390 × 844) | Note: Close (×) with unsaved changes asks first. -->
+      <figure class="g-item" data-screen="card-detail" data-state="card-detail" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Card detail at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Card detail</b><span class="note">Close (×) with unsaved changes asks first.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Card detail panel | Size: tablet (834 × 1112) -->
+      <figure class="g-item" data-screen="card-detail" data-state="card-detail-panel" data-size="tablet" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Tablet portrait · 834 Card detail panel at full size" data-w="834" data-h="1112" data-base="0.42">
+        <div class="fr ui fr-web fr-tablet" style="width: 834px; height: 1112px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Tablet portrait · 834</span><b>Card detail panel</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Card detail panel | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="card-detail-panel" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Card detail panel at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Card detail panel</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Labels on a card ================= -->
+    <div class="g-group" id="labels-on-a-card"><h3>Labels on a card</h3><div class="g-row">
+
+      <!-- Screen: Card detail | State: Label picker | Size: desktop (1440 × 900) | Note: Only existing labels can be picked. New labels are created on the Labels page. -->
+      <figure class="g-item" data-screen="card-detail" data-state="label-picker" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Label picker at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span>
+                        <div class="pop" style="left:0;top:calc(100% + 6px)">
+                          <div class="pop-h">
+                            <div class="field">
+                              <div class="input"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Find a label</span></span></div>
+                            </div>
+                          </div>
+                          <div class="pop-list">
+                            <div class="opt"><span class="cb on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                            <div class="opt"><span class="cb"></span><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                            <div class="opt"><span class="cb on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                            <div class="opt hl"><span class="cb"></span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                            <div class="opt"><span class="cb"></span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                            <div class="opt"><span class="cb"></span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                            <div class="opt"><span class="cb"></span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                          </div>
+                          <div class="pop-f"><span>Labels are shared across boards</span><a>Manage labels</a></div>
+                        </div></span>
+                      </div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Label picker</b><span class="note">Only existing labels can be picked. New labels are created on the Labels page.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Label picker sheet | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="label-picker-sheet" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Label picker sheet at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save</span></div>
+            </div>
+            <div class="scrim" style="padding:0"></div>
+            <div class="sheet">
+              <div class="grab"></div>
+              <div style="display:flex;align-items:center"><b style="font-size:16px">Labels</b><span class="sp"></span><a style="color:var(--accent);font-weight:500;font-size:14px">Manage labels</a></div>
+              <div class="field">
+                <div class="input"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Find a label</span></span></div>
+              </div>
+              <div class="pop-list" style="padding:0">
+                <div class="opt"><span class="cb on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                <div class="opt"><span class="cb"></span><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                <div class="opt"><span class="cb on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                <div class="opt"><span class="cb"></span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                <div class="opt"><span class="cb"></span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                <div class="opt"><span class="cb"></span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                <div class="opt"><span class="cb"></span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+              </div><span class="btn btn-primary block">Done</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Label picker sheet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: No labels yet | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="no-labels-yet" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 No labels yet at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="muted" style="font-size:13px">No labels</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span>
+                        <div class="pop" style="left:0;top:calc(100% + 6px)">
+                          <div style="padding:18px 16px;display:grid;gap:8px;justify-items:start"><b style="font-size:13.5px">You don’t have any labels yet</b><span class="muted" style="font-size:13px">Create labels on the Labels page, then come back to add them to this card.</span><span class="btn btn-secondary sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Go to Labels</span></div>
+                        </div></span>
+                      </div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>No labels yet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: No labels yet | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="no-labels-yet" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 No labels yet at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save</span></div>
+            </div>
+            <div class="scrim" style="padding:0"></div>
+            <div class="sheet">
+              <div class="grab"></div><b style="font-size:16px">Labels</b>
+              <div style="display:grid;gap:8px;padding:8px 0 4px"><span style="font-size:15px;font-weight:600">You don’t have any labels yet</span><span class="muted">Create labels on the Labels page, then come back to add them to this card.</span></div><span class="btn btn-secondary block"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Go to Labels</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>No labels yet</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Editing ================= -->
+    <div class="g-group" id="editing"><h3>Editing</h3><div class="g-row">
+
+      <!-- Screen: Card detail | State: Editing | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="editing" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Editing at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input focus area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save changes</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Editing</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Editing | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="editing" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Editing at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input focus area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save changes</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Editing</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Empty title | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="empty-title" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Empty title at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input focus err title-in multi"><span style="flex:1;min-width:0"><span class="ph">Card title</span></span></div>
+                      <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>Enter a title.</div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Empty title</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Empty title | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="empty-title" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Empty title at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input focus err title-in multi"><span style="flex:1;min-width:0"><span class="ph">Card title</span></span></div>
+                  <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>Enter a title.</div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Empty title</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Saving | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="saving" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Saving at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input focus area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary"><span class="spin"></span>Saving…</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Saving</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Unsaved changes | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="unsaved-changes" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Unsaved changes at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input focus area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save changes</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Discard changes?</h2><p>Your changes to CRD-109 haven’t been saved.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Keep editing</span><span class="btn btn-danger">Discard</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Unsaved changes</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Unsaved changes | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="unsaved-changes" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Unsaved changes at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input focus area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save changes</span></div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Discard changes?</h2><p>Your changes to CRD-109 haven’t been saved.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Keep editing</span><span class="btn btn-danger">Discard</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Unsaved changes</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Delete card | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="card-detail" data-state="delete-card" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Delete card at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Cardigan v1</h1><span class="key">CRD</span><span class="meta">12 cards</span><span class="sp"></span>
+                  <div class="field">
+                    <div class="input search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><span style="flex:1;min-width:0"><span class="ph">Search cards</span></span></div>
+                  </div><span class="anchor"><span class="fbtn"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"></path></svg></span></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="anchor"><span class="ib boxed" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                </div>
+                <div class="board">
+                  <div class="board-inner">
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">To do</span><span class="col-n">4</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-118</div>
+                        <div class="t-title">Decide card ordering: fractional ranks vs. integer positions</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-121</div>
+                        <div class="t-title">Define export file format v1</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-124</div>
+                        <div class="t-title">Empty state for the board list</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-127</div>
+                        <div class="t-title">Refresh token transport on web</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">In progress</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile sel">
+                        <div class="t-id">CRD-109</div>
+                        <div class="t-title">Single-flight token refresh in the Ktor client</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-112</div>
+                        <div class="t-title">Column menu with move left and right</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-115</div>
+                        <div class="t-title">Long-press drag with auto-scroll between columns</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Review</span><span class="col-n">2</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-104</div>
+                        <div class="t-title">Import fails on a board with an empty column</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-106</div>
+                        <div class="t-title">Reverse proxy and TLS on the VPS</div>
+                        <div class="t-labs"><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="col">
+                      <div class="col-h"><span class="col-name">Done</span><span class="col-n">3</span><span class="anchor" style="margin-left:auto"><span class="ib" title="Column menu" aria-label="Column menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="tile">
+                        <div class="t-id">CRD-101</div>
+                        <div class="t-title">First draft of the REST contract</div>
+                        <div class="t-labs"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-102</div>
+                        <div class="t-title">CMP project scaffolding with CI</div>
+                        <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span></div>
+                      </div>
+                      <div class="tile">
+                        <div class="t-id">CRD-103</div>
+                        <div class="t-title">React and TypeScript scaffold</div>
+                        <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+                      </div>
+                      <div class="add-row"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add card</div>
+                    </div>
+                    <div class="addcol"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add column</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="pn-h"><span class="mono" style="font-size:12.5px;color:var(--muted)">CRD-109</span><span class="muted" style="font-size:12.5px">in In progress</span><span class="sp"></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+                  <div class="pn-b">
+                    <div class="field"><label>Title</label>
+                      <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                    </div>
+                    <div class="field"><label>Labels</label>
+                      <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                    </div>
+                    <div class="field"><label>Description</label>
+                      <div class="input area" style="min-height:220px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                      <div class="help">Plain text</div>
+                    </div>
+                    <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+                  </div>
+                  <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete card CRD-109?</h2><p>“Single-flight token refresh in the Ktor client” will be deleted. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete card</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Delete card</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Delete card | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="card-detail" data-state="delete-card" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Delete card at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests.</span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save</span></div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete card CRD-109?</h2><p>“Single-flight token refresh in the Ktor client” will be deleted. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete card</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Delete card</b></figcaption>
+      </figure>
+
+      <!-- Screen: Card detail | State: Save failed | Size: phone (390 × 844) | Note: Edits stay in the form so the user can try again. -->
+      <figure class="g-item" data-screen="card-detail" data-state="save-failed" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Save failed at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar"><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="ab-center">CRD-109</span><span style="width:40px"></span></div>
+              <div class="pn-b" style="flex:1"><span class="muted" style="font-size:13px;margin-bottom:-12px">In progress · Cardigan v1</span>
+                <div class="field"><label>Title</label>
+                  <div class="input title-in multi"><span style="flex:1;min-width:0">Single-flight token refresh in the Ktor client</span></div>
+                </div>
+                <div class="field"><label>Labels</label>
+                  <div class="d-labs"><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="anchor"><span class="btn btn-ghost sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg>Edit labels</span></span></div>
+                </div>
+                <div class="field"><label>Description</label>
+                  <div class="input focus area" style="min-height:210px"><span style="flex:1;min-width:0">When several requests get a 401 at the same time, only one of them should call the refresh endpoint. The others wait for the new access token and then retry.
+
+If the refresh fails, log the user out and show the login screen with the session expired message.
+
+Add a test with three parallel requests. Use a Mutex around the refresh call.<span class="caret"></span></span></div>
+                  <div class="help">Plain text</div>
+                </div>
+                <div class="d-meta"><span>Created Oct 12, 2026, 14:03</span><span>Updated today, 11:20</span></div>
+              </div>
+              <div class="pn-f"><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="sp"></span><span class="btn btn-primary">Save changes</span></div>
+            </div>
+            <div class="toast" style="bottom:96px"><span class="dot" style="background:var(--danger)"></span><span>Couldn’t save CRD-109. Check your connection and try again.</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Save failed</b><span class="note">Edits stay in the form so the user can try again.</span></figcaption>
+      </figure>
+    </div></div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+{
+  "project": {
+    "name": "Cardigan",
+    "summary": "Kanban app (boards, columns, cards, labels) with a Kotlin Spring Boot backend, a Compose Multiplatform app for Android and iOS, and a responsive React web app."
+  },
+  "areas": [
+    {
+      "id": "contract",
+      "name": "API Contract"
+    },
+    {
+      "id": "backend",
+      "name": "Backend"
+    },
+    {
+      "id": "infra",
+      "name": "Infrastructure"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile (CMP)"
+    },
+    {
+      "id": "web",
+      "name": "Web"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "api-contract",
+      "title": "API contract",
+      "area": "contract",
+      "size": "M",
+      "summary": "REST contract (e.g. OpenAPI) for auth, boards, columns, cards, labels, ordering and board import/export, including the shared error model and the JSON export format.",
+      "doneWhen": "The spec is reviewed, validated by a linter and covers every v1 operation including error responses.",
+      "dependsOn": []
+    },
+    {
+      "id": "be-scaffolding",
+      "title": "Backend scaffolding & architecture",
+      "area": "backend",
+      "size": "M",
+      "summary": "Spring Boot (Kotlin) project, package/module layout, Postgres connection (local + Supabase), migration tooling, global error handling, logging, health endpoint, Dockerfile and CI build/test.",
+      "doneWhen": "Service boots locally against Postgres with an empty migration, exposes a health endpoint, and CI builds and tests it.",
+      "dependsOn": []
+    },
+    {
+      "id": "be-auth",
+      "title": "Backend authentication",
+      "area": "backend",
+      "size": "M",
+      "summary": "Users, registration, login and logout with password hashing, 15-minute JWT access tokens, 30-day refresh tokens with rotation and revocation, and the security filter protecting all other endpoints.",
+      "doneWhen": "Integration tests cover register, login, refresh, logout and rejection of expired/revoked tokens, matching the contract.",
+      "dependsOn": [
+        "be-scaffolding",
+        "api-contract"
+      ]
+    },
+    {
+      "id": "be-boards",
+      "title": "Backend boards & columns",
+      "area": "backend",
+      "size": "M",
+      "summary": "Per-user boards and their columns with CRUD, column reordering and ownership scoping.",
+      "doneWhen": "Integration tests cover board and column CRUD, column ordering and ownership isolation per the contract.",
+      "dependsOn": [
+        "be-auth"
+      ]
+    },
+    {
+      "id": "be-cards",
+      "title": "Backend cards & card ordering",
+      "area": "backend",
+      "size": "M",
+      "summary": "Cards inside columns with CRUD, moves within a column and across columns, and a position scheme that stays consistent under reordering.",
+      "doneWhen": "Integration tests cover card CRUD, same-column and cross-column moves, order consistency and ownership isolation.",
+      "dependsOn": [
+        "be-boards"
+      ]
+    },
+    {
+      "id": "be-labels",
+      "title": "Backend labels",
+      "area": "backend",
+      "size": "S",
+      "summary": "User-defined labels (CRUD) and attaching/detaching labels to cards; cards return their labels.",
+      "doneWhen": "Integration tests cover label CRUD, attach/detach and ownership isolation.",
+      "dependsOn": [
+        "be-cards"
+      ]
+    },
+    {
+      "id": "be-import-export",
+      "title": "Backend board import/export",
+      "area": "backend",
+      "size": "M",
+      "summary": "Blocking download of a complete board as JSON (columns, cards, labels, order) and blocking upload that validates the file and recreates the board for the current user.",
+      "doneWhen": "Round-trip test: an exported board imported into another account is equivalent; invalid files are rejected with contract errors.",
+      "dependsOn": [
+        "be-labels"
+      ]
+    },
+    {
+      "id": "infra-vps",
+      "title": "VPS infrastructure & deployment",
+      "area": "infra",
+      "size": "M",
+      "summary": "Provision the production VPS: container runtime, reverse proxy with TLS serving the web build and the API, secrets, Supabase Postgres connection, backups/monitoring basics, and an automated CD pipeline for backend and web.",
+      "doneWhen": "A push to main deploys the backend and the web build to production over HTTPS and the health endpoint answers.",
+      "dependsOn": [
+        "be-scaffolding",
+        "web-scaffolding"
+      ]
+    },
+    {
+      "id": "mob-scaffolding",
+      "title": "Mobile scaffolding & architecture",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Compose Multiplatform project for Android and iOS, module structure, base architecture (MVI, DI), navigation shell, HTTP client base and error model, CI build.",
+      "doneWhen": "App launches on Android and iOS with a placeholder screen and navigation shell; CI builds both targets.",
+      "dependsOn": []
+    },
+    {
+      "id": "mob-design-system",
+      "title": "Mobile design system",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Theme, tokens (colors, typography, spacing, light/dark) and base components shared by all mobile screens.",
+      "doneWhen": "Theme and base components exist with previews and are used by a sample screen on both platforms.",
+      "dependsOn": [
+        "mob-scaffolding"
+      ]
+    },
+    {
+      "id": "mob-fake-api",
+      "title": "Mobile fake API layer",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Data source interfaces from the contract plus in-memory fakes that model production behavior, including errors, latency and expiring tokens, swappable for the real client later.",
+      "doneWhen": "Every contract operation has a fake implementation with tests, selectable via DI.",
+      "dependsOn": [
+        "api-contract",
+        "mob-scaffolding"
+      ]
+    },
+    {
+      "id": "mob-auth",
+      "title": "Mobile authentication",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Register, login and logout screens, secure token storage on Android and iOS, refresh-on-expiry handling, and session-gated navigation.",
+      "doneWhen": "Register, login, auto-refresh and logout work end to end against the fake API on both platforms.",
+      "dependsOn": [
+        "mob-fake-api",
+        "mob-design-system"
+      ]
+    },
+    {
+      "id": "mob-board-list",
+      "title": "Mobile board list",
+      "area": "mobile",
+      "size": "S",
+      "summary": "Board overview: list boards, create, rename and delete, with loading/empty/error states and intentional refresh.",
+      "doneWhen": "Board list flows work against the fake API on Android and iOS.",
+      "dependsOn": [
+        "mob-fake-api",
+        "mob-design-system"
+      ]
+    },
+    {
+      "id": "mob-board-view",
+      "title": "Mobile board view",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Board screen showing columns and cards with layouts per screen size (phone and tablet), column create/rename/delete, column move buttons, and intentional refresh.",
+      "doneWhen": "A seeded fake board renders correctly on phone and tablet; column CRUD and move buttons work against the fake API.",
+      "dependsOn": [
+        "mob-fake-api",
+        "mob-design-system"
+      ]
+    },
+    {
+      "id": "mob-card-detail",
+      "title": "Mobile card detail & editing",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Create, view, edit and delete cards; presentation adapts to screen size (e.g. sheet on phones, dialog/side panel on wide screens).",
+      "doneWhen": "Card create/edit/delete works from the board view against the fake API on phone and tablet.",
+      "dependsOn": [
+        "mob-board-view"
+      ]
+    },
+    {
+      "id": "mob-card-dnd",
+      "title": "Mobile card drag & drop",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Touch drag & drop of cards within and across columns, including auto-scroll, persisting the move and handling failures.",
+      "doneWhen": "Cards can be dragged within and across columns on both platforms; the order persists in the fake API and failed moves roll back.",
+      "dependsOn": [
+        "mob-board-view"
+      ]
+    },
+    {
+      "id": "mob-labels",
+      "title": "Mobile labels",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Label management (create/edit/delete), attaching labels to cards, and showing labels on cards.",
+      "doneWhen": "Labels can be managed and attached to cards against the fake API on both platforms.",
+      "dependsOn": [
+        "mob-card-detail"
+      ]
+    },
+    {
+      "id": "mob-search-filter",
+      "title": "Mobile board search & filter",
+      "area": "mobile",
+      "size": "S",
+      "summary": "Client-side text search and label filter over the cards of the open board.",
+      "doneWhen": "Searching and filtering by labels narrows the visible cards of the open board without backend calls.",
+      "dependsOn": [
+        "mob-labels"
+      ]
+    },
+    {
+      "id": "mob-import-export",
+      "title": "Mobile board import/export",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Export a board as a JSON file and import one via platform file pickers/share sheets on Android and iOS, with blocking progress and error handling.",
+      "doneWhen": "Export saves/shares a JSON file and import creates a board from a file, on both platforms against the fake API.",
+      "dependsOn": [
+        "mob-board-list"
+      ]
+    },
+    {
+      "id": "mob-integration",
+      "title": "Mobile integration with real backend",
+      "area": "mobile",
+      "size": "M",
+      "summary": "Real HTTP implementations of the data sources, environment/base URL config, real refresh-token flow, and end-to-end verification against production.",
+      "doneWhen": "All mobile flows work on Android and iOS against the deployed backend.",
+      "dependsOn": [
+        "mob-auth",
+        "mob-card-dnd",
+        "mob-search-filter",
+        "mob-import-export",
+        "be-import-export",
+        "infra-vps"
+      ]
+    },
+    {
+      "id": "web-scaffolding",
+      "title": "Web scaffolding & architecture",
+      "area": "web",
+      "size": "M",
+      "summary": "React + TypeScript project, build tooling, routing, data-fetching setup, HTTP client base and error model, responsive app shell, lint/test and CI.",
+      "doneWhen": "App builds and runs with a responsive shell and routing; CI lints, tests and produces a static build.",
+      "dependsOn": []
+    },
+    {
+      "id": "web-design-system",
+      "title": "Web design system",
+      "area": "web",
+      "size": "M",
+      "summary": "Tokens and responsive base components (buttons, inputs, dialogs, menus, layout primitives) for phone, tablet and desktop widths.",
+      "doneWhen": "Base components exist, are documented/previewable and render correctly from phone to desktop widths.",
+      "dependsOn": [
+        "web-scaffolding"
+      ]
+    },
+    {
+      "id": "web-fake-api",
+      "title": "Web fake API layer",
+      "area": "web",
+      "size": "M",
+      "summary": "Fake implementation of the contract (in-memory or request mocking) modeling production behavior including errors, latency and token expiry, switchable for the real API.",
+      "doneWhen": "Every contract operation is served by the fake layer with tests, toggled by configuration.",
+      "dependsOn": [
+        "api-contract",
+        "web-scaffolding"
+      ]
+    },
+    {
+      "id": "web-auth",
+      "title": "Web authentication",
+      "area": "web",
+      "size": "M",
+      "summary": "Register, login and logout pages, token handling and refresh-on-expiry, protected routes.",
+      "doneWhen": "Register, login, auto-refresh and logout work end to end against the fake API.",
+      "dependsOn": [
+        "web-fake-api",
+        "web-design-system"
+      ]
+    },
+    {
+      "id": "web-board-list",
+      "title": "Web board list",
+      "area": "web",
+      "size": "S",
+      "summary": "Board overview: list boards, create, rename and delete, with loading/empty/error states and intentional refresh.",
+      "doneWhen": "Board list flows work against the fake API.",
+      "dependsOn": [
+        "web-fake-api",
+        "web-design-system"
+      ]
+    },
+    {
+      "id": "web-board-view",
+      "title": "Web board view",
+      "area": "web",
+      "size": "M",
+      "summary": "Board screen showing columns and cards with layouts per screen size (phone to desktop widths), column create/rename/delete, column move buttons, and intentional refresh.",
+      "doneWhen": "A seeded fake board renders correctly on phone to desktop widths; column CRUD and move buttons work against the fake API.",
+      "dependsOn": [
+        "web-fake-api",
+        "web-design-system"
+      ]
+    },
+    {
+      "id": "web-card-detail",
+      "title": "Web card detail & editing",
+      "area": "web",
+      "size": "M",
+      "summary": "Create, view, edit and delete cards; presentation adapts to screen size (e.g. sheet on phones, dialog/side panel on wide screens).",
+      "doneWhen": "Card create/edit/delete works from the board view against the fake API on phone to desktop widths.",
+      "dependsOn": [
+        "web-board-view"
+      ]
+    },
+    {
+      "id": "web-card-dnd",
+      "title": "Web card drag & drop",
+      "area": "web",
+      "size": "M",
+      "summary": "Mouse and touch drag & drop of cards within and across columns, persisting moves and rolling back on failure.",
+      "doneWhen": "Cards can be dragged within and across columns with mouse and touch; order persists in the fake API and failed moves roll back.",
+      "dependsOn": [
+        "web-board-view"
+      ]
+    },
+    {
+      "id": "web-labels",
+      "title": "Web labels",
+      "area": "web",
+      "size": "M",
+      "summary": "Label management (create/edit/delete), attaching labels to cards, and showing labels on cards.",
+      "doneWhen": "Labels can be managed and attached to cards against the fake API.",
+      "dependsOn": [
+        "web-card-detail"
+      ]
+    },
+    {
+      "id": "web-search-filter",
+      "title": "Web board search & filter",
+      "area": "web",
+      "size": "S",
+      "summary": "Client-side text search and label filter over the cards of the open board.",
+      "doneWhen": "Searching and filtering by labels narrows the visible cards of the open board without backend calls.",
+      "dependsOn": [
+        "web-labels"
+      ]
+    },
+    {
+      "id": "web-import-export",
+      "title": "Web board import/export",
+      "area": "web",
+      "size": "S",
+      "summary": "Download a board as a JSON file and import one via file upload, with blocking progress and error handling.",
+      "doneWhen": "Export downloads a JSON file and import creates a board from it against the fake API.",
+      "dependsOn": [
+        "web-board-list"
+      ]
+    },
+    {
+      "id": "web-integration",
+      "title": "Web integration with real backend",
+      "area": "web",
+      "size": "M",
+      "summary": "Switch from fakes to the real API, environment config, real refresh-token flow (incl. CORS/cookie decisions), and end-to-end verification against production.",
+      "doneWhen": "All web flows work against the deployed backend in production.",
+      "dependsOn": [
+        "web-auth",
+        "web-card-dnd",
+        "web-search-filter",
+        "web-import-export",
+        "be-import-export",
+        "infra-vps"
+      ]
+    }
+  ]
+}

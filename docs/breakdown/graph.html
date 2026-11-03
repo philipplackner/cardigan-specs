@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Breakdown</title>
+<style>
+:root {
+  --bg: #f6f6f3; --surface: #ffffff; --surface-2: #efefeb; --text: #1b1b19; --muted: #6b6b66;
+  --line: #d9d9d3; --edge: #b9b9b2; --edge-hi: #1b1b19; --accent: #d9480f; --shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.05);
+  --font: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131312; --surface: #1d1d1b; --surface-2: #262624; --text: #ecece8; --muted: #9a9a93;
+    --line: #34342f; --edge: #4a4a44; --edge-hi: #ecece8; --accent: #ff8a4c; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font: 14px/1.45 var(--font); display: flex; flex-direction: column; }
+header { padding: 18px 24px 14px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: flex-end; }
+header h1 { margin: 0; font-size: 20px; letter-spacing: -.01em; }
+header .sub { color: var(--muted); margin-top: 2px; max-width: 60ch; }
+.stats { display: flex; gap: 22px; margin-left: auto; }
+.stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.toolbar { padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; border-bottom: 1px solid var(--line); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.toolbar label { margin-left: auto; display: inline-flex; gap: 6px; align-items: center; font-size: 13px; cursor: pointer; user-select: none; }
+.hint { color: var(--muted); font-size: 12.5px; }
+main { flex: 1; display: flex; min-height: 0; }
+.scroller { flex: 1; overflow: auto; position: relative; }
+.canvas { position: relative; display: inline-flex; gap: 76px; padding: 20px 32px 40px; min-width: 100%; }
+svg.edges { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+.col { width: 224px; flex: none; display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
+.col h2 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; display: flex; justify-content: space-between; }
+.col h2 em { font-style: normal; color: var(--text); }
+.node { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--c); border-radius: 8px; padding: 9px 11px; cursor: pointer; box-shadow: var(--shadow); transition: opacity .15s, transform .15s, border-color .15s; text-align: left; font: inherit; color: inherit; width: 100%; }
+.node:hover { transform: translateY(-1px); }
+.node:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.node .t { font-weight: 600; font-size: 13.5px; line-height: 1.3; }
+.node .m { display: flex; justify-content: space-between; gap: 8px; margin-top: 5px; font-size: 11.5px; color: var(--muted); }
+.node .m code { font-family: var(--mono); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.size { font-family: var(--mono); font-weight: 700; padding: 0 5px; border-radius: 4px; background: var(--surface-2); color: var(--text); flex: none; }
+.dim .node { opacity: .28; }
+.dim .node.sel, .dim .node.dep, .dim .node.unl { opacity: 1; }
+.dim .node.dep2, .dim .node.unl2 { opacity: .7; }
+.node.sel { border-color: var(--edge-hi); border-left-color: var(--c); box-shadow: 0 0 0 2px var(--edge-hi), var(--shadow); }
+.node.crit { box-shadow: 0 0 0 2px var(--accent), var(--shadow); }
+path.e { fill: none; stroke: var(--edge); stroke-width: 1.4; transition: opacity .15s; }
+.dim path.e { opacity: .12; }
+.dim path.e.up, .dim path.e.down { opacity: 1; stroke: var(--edge-hi); stroke-width: 2; }
+.dim path.e.down { stroke: var(--accent); }
+path.e.crit { stroke: var(--accent); stroke-width: 2.2; }
+aside { width: 340px; flex: none; border-left: 1px solid var(--line); background: var(--surface); overflow: auto; padding: 20px 22px; }
+aside .empty { color: var(--muted); }
+aside h3 { margin: 6px 0 4px; font-size: 18px; line-height: 1.3; }
+aside .area { display: inline-flex; gap: 6px; align-items: center; font-size: 12.5px; color: var(--muted); }
+aside .area i { width: 10px; height: 10px; border-radius: 3px; }
+aside dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 14px 0; font-size: 13px; }
+aside dt { color: var(--muted); }
+aside dd { margin: 0; }
+aside dd code { font-family: var(--mono); font-size: 12px; }
+aside h4 { margin: 18px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+aside p { margin: 0; }
+.links { display: flex; flex-direction: column; gap: 4px; }
+.links button { all: unset; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 6px; background: var(--surface-2); font-size: 13px; }
+.links button:hover { outline: 1px solid var(--line); }
+.links button i { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+.links .none { color: var(--muted); font-size: 13px; }
+.legend-key { margin-top: 22px; font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
+.legend-key span::before { content: ""; display: inline-block; width: 18px; height: 2px; vertical-align: middle; margin-right: 8px; background: var(--k); }
+@media (max-width: 860px) {
+  main { flex-direction: column; }
+  aside { width: auto; border-left: 0; border-top: 1px solid var(--line); max-height: 45vh; }
+  header, .toolbar { padding-left: 16px; padding-right: 16px; }
+  .stats { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="title">Project Breakdown</h1>
+    <div class="sub" id="summary"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+<div class="toolbar">
+  <div class="legend" id="legend"></div>
+  <label><input type="checkbox" id="crit"> Critical path</label>
+  <span class="hint">Click a chunk · Esc to clear</span>
+</div>
+<main>
+  <div class="scroller" id="scroller">
+    <div class="canvas" id="canvas"><svg class="edges" id="edges"></svg></div>
+  </div>
+  <aside id="panel"><p class="empty">Select a chunk to see what it depends on, what it unlocks, and its summary.</p></aside>
+</main>
+<script>
+const DATA = {"project": {"name": "Cardigan", "summary": "Kanban app (boards, columns, cards, labels) with a Kotlin Spring Boot backend, a Compose Multiplatform app for Android and iOS, and a responsive React web app."}, "areas": [{"id": "contract", "name": "API Contract"}, {"id": "backend", "name": "Backend"}, {"id": "infra", "name": "Infrastructure"}, {"id": "mobile", "name": "Mobile (CMP)"}, {"id": "web", "name": "Web"}], "criticalPath": ["api-contract", "mob-fake-api", "mob-board-view", "mob-card-detail", "mob-labels", "mob-search-filter", "mob-integration"], "chunks": [{"id": "api-contract", "title": "API contract", "area": "contract", "size": "M", "summary": "REST contract (e.g. OpenAPI) for auth, boards, columns, cards, labels, ordering and board import/export, including the shared error model and the JSON export format.", "doneWhen": "The spec is reviewed, validated by a linter and covers every v1 operation including error responses.", "dependsOn": [], "wave": 1, "unlocks": ["be-auth", "mob-fake-api", "web-fake-api"], "file": "chunks/01-api-contract.md"}, {"id": "be-scaffolding", "title": "Backend scaffolding & architecture", "area": "backend", "size": "M", "summary": "Spring Boot (Kotlin) project, package/module layout, Postgres connection (local + Supabase), migration tooling, global error handling, logging, health endpoint, Dockerfile and CI build/test.", "doneWhen": "Service boots locally against Postgres with an empty migration, exposes a health endpoint, and CI builds and tests it.", "dependsOn": [], "wave": 1, "unlocks": ["be-auth", "infra-vps"], "file": "chunks/02-be-scaffolding.md"}, {"id": "mob-scaffolding", "title": "Mobile scaffolding & architecture", "area": "mobile", "size": "M", "summary": "Compose Multiplatform project for Android and iOS, module structure, base architecture (MVI, DI), navigation shell, HTTP client base and error model, CI build.", "doneWhen": "App launches on Android and iOS with a placeholder screen and navigation shell; CI builds both targets.", "dependsOn": [], "wave": 1, "unlocks": ["mob-design-system", "mob-fake-api"], "file": "chunks/03-mob-scaffolding.md"}, {"id": "web-scaffolding", "title": "Web scaffolding & architecture", "area": "web", "size": "M", "summary": "React + TypeScript project, build tooling, routing, data-fetching setup, HTTP client base and error model, responsive app shell, lint/test and CI.", "doneWhen": "App builds and runs with a responsive shell and routing; CI lints, tests and produces a static build.", "dependsOn": [], "wave": 1, "unlocks": ["infra-vps", "web-design-system", "web-fake-api"], "file": "chunks/04-web-scaffolding.md"}, {"id": "be-auth", "title": "Backend authentication", "area": "backend", "size": "M", "summary": "Users, registration, login and logout with password hashing, 15-minute JWT access tokens, 30-day refresh tokens with rotation and revocation, and the security filter protecting all other endpoints.", "doneWhen": "Integration tests cover register, login, refresh, logout and rejection of expired/revoked tokens, matching the contract.", "dependsOn": ["be-scaffolding", "api-contract"], "wave": 2, "unlocks": ["be-boards"], "file": "chunks/05-be-auth.md"}, {"id": "infra-vps", "title": "VPS infrastructure & deployment", "area": "infra", "size": "M", "summary": "Provision the production VPS: container runtime, reverse proxy with TLS serving the web build and the API, secrets, Supabase Postgres connection, backups/monitoring basics, and an automated CD pipeline for backend and web.", "doneWhen": "A push to main deploys the backend and the web build to production over HTTPS and the health endpoint answers.", "dependsOn": ["be-scaffolding", "web-scaffolding"], "wave": 2, "unlocks": ["mob-integration", "web-integration"], "file": "chunks/06-infra-vps.md"}, {"id": "mob-design-system", "title": "Mobile design system", "area": "mobile", "size": "M", "summary": "Theme, tokens (colors, typography, spacing, light/dark) and base components shared by all mobile screens.", "doneWhen": "Theme and base components exist with previews and are used by a sample screen on both platforms.", "dependsOn": ["mob-scaffolding"], "wave": 2, "unlocks": ["mob-auth", "mob-board-list", "mob-board-view"], "file": "chunks/07-mob-design-system.md"}, {"id": "mob-fake-api", "title": "Mobile fake API layer", "area": "mobile", "size": "M", "summary": "Data source interfaces from the contract plus in-memory fakes that model production behavior, including errors, latency and expiring tokens, swappable for the real client later.", "doneWhen": "Every contract operation has a fake implementation with tests, selectable via DI.", "dependsOn": ["api-contract", "mob-scaffolding"], "wave": 2, "unlocks": ["mob-auth", "mob-board-list", "mob-board-view"], "file": "chunks/08-mob-fake-api.md"}, {"id": "web-design-system", "title": "Web design system", "area": "web", "size": "M", "summary": "Tokens and responsive base components (buttons, inputs, dialogs, menus, layout primitives) for phone, tablet and desktop widths.", "doneWhen": "Base components exist, are documented/previewable and render correctly from phone to desktop widths.", "dependsOn": ["web-scaffolding"], "wave": 2, "unlocks": ["web-auth", "web-board-list", "web-board-view"], "file": "chunks/09-web-design-system.md"}, {"id": "web-fake-api", "title": "Web fake API layer", "area": "web", "size": "M", "summary": "Fake implementation of the contract (in-memory or request mocking) modeling production behavior including errors, latency and token expiry, switchable for the real API.", "doneWhen": "Every contract operation is served by the fake layer with tests, toggled by configuration.", "dependsOn": ["api-contract", "web-scaffolding"], "wave": 2, "unlocks": ["web-auth", "web-board-list", "web-board-view"], "file": "chunks/10-web-fake-api.md"}, {"id": "be-boards", "title": "Backend boards & columns", "area": "backend", "size": "M", "summary": "Per-user boards and their columns with CRUD, column reordering and ownership scoping.", "doneWhen": "Integration tests cover board and column CRUD, column ordering and ownership isolation per the contract.", "dependsOn": ["be-auth"], "wave": 3, "unlocks": ["be-cards"], "file": "chunks/11-be-boards.md"}, {"id": "mob-auth", "title": "Mobile authentication", "area": "mobile", "size": "M", "summary": "Register, login and logout screens, secure token storage on Android and iOS, refresh-on-expiry handling, and session-gated navigation.", "doneWhen": "Register, login, auto-refresh and logout work end to end against the fake API on both platforms.", "dependsOn": ["mob-fake-api", "mob-design-system"], "wave": 3, "unlocks": ["mob-integration"], "file": "chunks/12-mob-auth.md"}, {"id": "mob-board-list", "title": "Mobile board list", "area": "mobile", "size": "S", "summary": "Board overview: list boards, create, rename and delete, with loading/empty/error states and intentional refresh.", "doneWhen": "Board list flows work against the fake API on Android and iOS.", "dependsOn": ["mob-fake-api", "mob-design-system"], "wave": 3, "unlocks": ["mob-import-export"], "file": "chunks/13-mob-board-list.md"}, {"id": "mob-board-view", "title": "Mobile board view", "area": "mobile", "size": "M", "summary": "Board screen showing columns and cards with layouts per screen size (phone and tablet), column create/rename/delete, column move buttons, and intentional refresh.", "doneWhen": "A seeded fake board renders correctly on phone and tablet; column CRUD and move buttons work against the fake API.", "dependsOn": ["mob-fake-api", "mob-design-system"], "wave": 3, "unlocks": ["mob-card-detail", "mob-card-dnd"], "file": "chunks/14-mob-board-view.md"}, {"id": "web-auth", "title": "Web authentication", "area": "web", "size": "M", "summary": "Register, login and logout pages, token handling and refresh-on-expiry, protected routes.", "doneWhen": "Register, login, auto-refresh and logout work end to end against the fake API.", "dependsOn": ["web-fake-api", "web-design-system"], "wave": 3, "unlocks": ["web-integration"], "file": "chunks/15-web-auth.md"}, {"id": "web-board-list", "title": "Web board list", "area": "web", "size": "S", "summary": "Board overview: list boards, create, rename and delete, with loading/empty/error states and intentional refresh.", "doneWhen": "Board list flows work against the fake API.", "dependsOn": ["web-fake-api", "web-design-system"], "wave": 3, "unlocks": ["web-import-export"], "file": "chunks/16-web-board-list.md"}, {"id": "web-board-view", "title": "Web board view", "area": "web", "size": "M", "summary": "Board screen showing columns and cards with layouts per screen size (phone to desktop widths), column create/rename/delete, column move buttons, and intentional refresh.", "doneWhen": "A seeded fake board renders correctly on phone to desktop widths; column CRUD and move buttons work against the fake API.", "dependsOn": ["web-fake-api", "web-design-system"], "wave": 3, "unlocks": ["web-card-detail", "web-card-dnd"], "file": "chunks/17-web-board-view.md"}, {"id": "be-cards", "title": "Backend cards & card ordering", "area": "backend", "size": "M", "summary": "Cards inside columns with CRUD, moves within a column and across columns, and a position scheme that stays consistent under reordering.", "doneWhen": "Integration tests cover card CRUD, same-column and cross-column moves, order consistency and ownership isolation.", "dependsOn": ["be-boards"], "wave": 4, "unlocks": ["be-labels"], "file": "chunks/18-be-cards.md"}, {"id": "mob-card-detail", "title": "Mobile card detail & editing", "area": "mobile", "size": "M", "summary": "Create, view, edit and delete cards; presentation adapts to screen size (e.g. sheet on phones, dialog/side panel on wide screens).", "doneWhen": "Card create/edit/delete works from the board view against the fake API on phone and tablet.", "dependsOn": ["mob-board-view"], "wave": 4, "unlocks": ["mob-labels"], "file": "chunks/19-mob-card-detail.md"}, {"id": "mob-card-dnd", "title": "Mobile card drag & drop", "area": "mobile", "size": "M", "summary": "Touch drag & drop of cards within and across columns, including auto-scroll, persisting the move and handling failures.", "doneWhen": "Cards can be dragged within and across columns on both platforms; the order persists in the fake API and failed moves roll back.", "dependsOn": ["mob-board-view"], "wave": 4, "unlocks": ["mob-integration"], "file": "chunks/20-mob-card-dnd.md"}, {"id": "mob-import-export", "title": "Mobile board import/export", "area": "mobile", "size": "M", "summary": "Export a board as a JSON file and import one via platform file pickers/share sheets on Android and iOS, with blocking progress and error handling.", "doneWhen": "Export saves/shares a JSON file and import creates a board from a file, on both platforms against the fake API.", "dependsOn": ["mob-board-list"], "wave": 4, "unlocks": ["mob-integration"], "file": "chunks/21-mob-import-export.md"}, {"id": "web-card-detail", "title": "Web card detail & editing", "area": "web", "size": "M", "summary": "Create, view, edit and delete cards; presentation adapts to screen size (e.g. sheet on phones, dialog/side panel on wide screens).", "doneWhen": "Card create/edit/delete works from the board view against the fake API on phone to desktop widths.", "dependsOn": ["web-board-view"], "wave": 4, "unlocks": ["web-labels"], "file": "chunks/22-web-card-detail.md"}, {"id": "web-card-dnd", "title": "Web card drag & drop", "area": "web", "size": "M", "summary": "Mouse and touch drag & drop of cards within and across columns, persisting moves and rolling back on failure.", "doneWhen": "Cards can be dragged within and across columns with mouse and touch; order persists in the fake API and failed moves roll back.", "dependsOn": ["web-board-view"], "wave": 4, "unlocks": ["web-integration"], "file": "chunks/23-web-card-dnd.md"}, {"id": "web-import-export", "title": "Web board import/export", "area": "web", "size": "S", "summary": "Download a board as a JSON file and import one via file upload, with blocking progress and error handling.", "doneWhen": "Export downloads a JSON file and import creates a board from it against the fake API.", "dependsOn": ["web-board-list"], "wave": 4, "unlocks": ["web-integration"], "file": "chunks/24-web-import-export.md"}, {"id": "be-labels", "title": "Backend labels", "area": "backend", "size": "S", "summary": "User-defined labels (CRUD) and attaching/detaching labels to cards; cards return their labels.", "doneWhen": "Integration tests cover label CRUD, attach/detach and ownership isolation.", "dependsOn": ["be-cards"], "wave": 5, "unlocks": ["be-import-export"], "file": "chunks/25-be-labels.md"}, {"id": "mob-labels", "title": "Mobile labels", "area": "mobile", "size": "M", "summary": "Label management (create/edit/delete), attaching labels to cards, and showing labels on cards.", "doneWhen": "Labels can be managed and attached to cards against the fake API on both platforms.", "dependsOn": ["mob-card-detail"], "wave": 5, "unlocks": ["mob-search-filter"], "file": "chunks/26-mob-labels.md"}, {"id": "web-labels", "title": "Web labels", "area": "web", "size": "M", "summary": "Label management (create/edit/delete), attaching labels to cards, and showing labels on cards.", "doneWhen": "Labels can be managed and attached to cards against the fake API.", "dependsOn": ["web-card-detail"], "wave": 5, "unlocks": ["web-search-filter"], "file": "chunks/27-web-labels.md"}, {"id": "be-import-export", "title": "Backend board import/export", "area": "backend", "size": "M", "summary": "Blocking download of a complete board as JSON (columns, cards, labels, order) and blocking upload that validates the file and recreates the board for the current user.", "doneWhen": "Round-trip test: an exported board imported into another account is equivalent; invalid files are rejected with contract errors.", "dependsOn": ["be-labels"], "wave": 6, "unlocks": ["mob-integration", "web-integration"], "file": "chunks/28-be-import-export.md"}, {"id": "mob-search-filter", "title": "Mobile board search & filter", "area": "mobile", "size": "S", "summary": "Client-side text search and label filter over the cards of the open board.", "doneWhen": "Searching and filtering by labels narrows the visible cards of the open board without backend calls.", "dependsOn": ["mob-labels"], "wave": 6, "unlocks": ["mob-integration"], "file": "chunks/29-mob-search-filter.md"}, {"id": "web-search-filter", "title": "Web board search & filter", "area": "web", "size": "S", "summary": "Client-side text search and label filter over the cards of the open board.", "doneWhen": "Searching and filtering by labels narrows the visible cards of the open board without backend calls.", "dependsOn": ["web-labels"], "wave": 6, "unlocks": ["web-integration"], "file": "chunks/30-web-search-filter.md"}, {"id": "mob-integration", "title": "Mobile integration with real backend", "area": "mobile", "size": "M", "summary": "Real HTTP implementations of the data sources, environment/base URL config, real refresh-token flow, and end-to-end verification against production.", "doneWhen": "All mobile flows work on Android and iOS against the deployed backend.", "dependsOn": ["mob-auth", "mob-card-dnd", "mob-search-filter", "mob-import-export", "be-import-export", "infra-vps"], "wave": 7, "unlocks": [], "file": "chunks/31-mob-integration.md"}, {"id": "web-integration", "title": "Web integration with real backend", "area": "web", "size": "M", "summary": "Switch from fakes to the real API, environment config, real refresh-token flow (incl. CORS/cookie decisions), and end-to-end verification against production.", "doneWhen": "All web flows work against the deployed backend in production.", "dependsOn": ["web-auth", "web-card-dnd", "web-search-filter", "web-import-export", "be-import-export", "infra-vps"], "wave": 7, "unlocks": [], "file": "chunks/32-web-integration.md"}]};
+// Area colors. Orange is reserved for the "unlocks" / critical-path highlight.
+const PALETTE = ["#2f6fdb", "#1f9d6b", "#8b5cf6", "#c2255c", "#0b8ea6", "#b8860b", "#5c7cfa", "#2b8a3e", "#7048e8", "#a61e4d", "#868e96", "#3d5a80"];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const areaColor = {}, areaName = {};
+DATA.areas.forEach((a, i) => { areaColor[a.id] = a.color || PALETTE[i % PALETTE.length]; areaName[a.id] = a.name; });
+const byId = Object.fromEntries(DATA.chunks.map((c) => [c.id, c]));
+const waves = Math.max(...DATA.chunks.map((c) => c.wave));
+const crit = new Set(DATA.criticalPath);
+const critEdges = new Set(DATA.criticalPath.slice(1).map((id, i) => DATA.criticalPath[i] + ">" + id));
+
+document.title = (DATA.project.name || "Project") + " · Breakdown";
+$("title").textContent = (DATA.project.name || "Project") + " — Breakdown";
+$("summary").textContent = DATA.project.summary || "";
+const cols = [];
+for (let w = 1; w <= waves; w++) cols.push(DATA.chunks.filter((c) => c.wave === w));
+const maxPar = Math.max(...cols.map((c) => c.length));
+$("stats").innerHTML = [[DATA.chunks.length, "Chunks"], [waves, "Waves"], [cols[0].length, "Start in parallel"], [maxPar, "Max parallel"]]
+  .map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");
+$("legend").innerHTML = DATA.areas.map((a) => `<span><i style="background:${areaColor[a.id]}"></i>${esc(a.name)}</span>`).join("");
+
+// Order nodes within each wave to reduce edge crossings (barycenter heuristic).
+const areaIdx = Object.fromEntries(DATA.areas.map((a, i) => [a.id, i]));
+cols.forEach((col) => col.sort((a, b) => areaIdx[a.area] - areaIdx[b.area] || a.id.localeCompare(b.id)));
+const pos = {};
+const index = () => cols.forEach((col) => col.forEach((c, i) => (pos[c.id] = i / Math.max(1, col.length - 1))));
+const bary = (c, ids) => (ids.length ? ids.reduce((s, id) => s + pos[id], 0) / ids.length : pos[c.id]);
+index();
+for (let pass = 0; pass < 4; pass++) {
+  for (let w = 1; w < cols.length; w++) { cols[w].sort((a, b) => bary(a, a.dependsOn) - bary(b, b.dependsOn) || areaIdx[a.area] - areaIdx[b.area]); index(); }
+  for (let w = cols.length - 2; w >= 0; w--) { cols[w].sort((a, b) => bary(a, a.unlocks) - bary(b, b.unlocks) || areaIdx[a.area] - areaIdx[b.area]); index(); }
+}
+
+const canvas = $("canvas"), svg = $("edges");
+const nodes = {};
+cols.forEach((col, i) => {
+  const el = document.createElement("div");
+  el.className = "col";
+  el.innerHTML = `<h2>Wave ${i + 1} <em>${col.length} parallel</em></h2>`;
+  col.forEach((c) => {
+    const b = document.createElement("button");
+    b.className = "node";
+    b.style.setProperty("--c", areaColor[c.area]);
+    b.innerHTML = `<div class="t">${esc(c.title)}</div><div class="m"><code>${esc(c.id)}</code><span class="size">${esc(c.size)}</span></div>`;
+    b.onclick = (e) => { e.stopPropagation(); select(selected === c.id ? null : c.id); };
+    nodes[c.id] = b;
+    el.appendChild(b);
+  });
+  canvas.appendChild(el);
+});
+
+const edges = [];
+DATA.chunks.forEach((c) => c.dependsOn.forEach((d) => edges.push({ from: d, to: c.id })));
+svg.innerHTML = `<defs>
+  <marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--edge)"/></marker>
+  <marker id="ah-hi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--edge-hi)"/></marker>
+  <marker id="ah-acc" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/></marker>
+</defs>` + edges.map((e) => `<path class="e" data-k="${esc(e.from + ">" + e.to)}" marker-end="url(#ah)"/>`).join("");
+const paths = [...svg.querySelectorAll("path.e")];
+
+function layoutEdges() {
+  const base = canvas.getBoundingClientRect();
+  svg.setAttribute("width", canvas.scrollWidth);
+  svg.setAttribute("height", canvas.scrollHeight);
+  paths.forEach((p, i) => {
+    const a = nodes[edges[i].from].getBoundingClientRect(), b = nodes[edges[i].to].getBoundingClientRect();
+    const x1 = a.right - base.left, y1 = a.top + a.height / 2 - base.top;
+    const x2 = b.left - base.left - 2, y2 = b.top + b.height / 2 - base.top;
+    const dx = Math.max(30, (x2 - x1) * 0.45);
+    p.setAttribute("d", `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`);
+  });
+}
+
+function closure(id, key) {
+  const out = new Set(), stack = [...byId[id][key]];
+  while (stack.length) { const n = stack.pop(); if (!out.has(n)) { out.add(n); stack.push(...byId[n][key]); } }
+  return out;
+}
+
+let selected = null;
+function select(id) {
+  selected = id;
+  canvas.classList.toggle("dim", !!id);
+  Object.values(nodes).forEach((n) => n.classList.remove("sel", "dep", "dep2", "unl", "unl2"));
+  paths.forEach((p) => { p.classList.remove("up", "down"); p.setAttribute("marker-end", markerFor(p)); });
+  if (!id) { $("panel").innerHTML = `<p class="empty">Select a chunk to see what it depends on, what it unlocks, and its summary.</p>`; return; }
+  const c = byId[id], up = closure(id, "dependsOn"), down = closure(id, "unlocks");
+  nodes[id].classList.add("sel");
+  up.forEach((n) => nodes[n].classList.add(c.dependsOn.includes(n) ? "dep" : "dep2"));
+  down.forEach((n) => nodes[n].classList.add(c.unlocks.includes(n) ? "unl" : "unl2"));
+  const upSet = new Set([...up, id]), downSet = new Set([...down, id]);
+  paths.forEach((p, i) => {
+    const e = edges[i];
+    if (upSet.has(e.from) && upSet.has(e.to) && (up.has(e.from))) { p.classList.add("up"); p.setAttribute("marker-end", "url(#ah-hi)"); }
+    if (downSet.has(e.from) && downSet.has(e.to) && down.has(e.to)) { p.classList.add("down"); p.setAttribute("marker-end", "url(#ah-acc)"); }
+  });
+  renderPanel(c, up, down);
+}
+
+function markerFor(p) { return $("crit").checked && p.classList.contains("crit") ? "url(#ah-acc)" : "url(#ah)"; }
+
+function linkList(ids, direct) {
+  if (!ids.length) return `<div class="none">None</div>`;
+  return `<div class="links">${ids.map((n) => `<button data-go="${esc(n)}"><i style="background:${areaColor[byId[n].area]}"></i>${esc(byId[n].title)}</button>`).join("")}</div>`;
+}
+
+function renderPanel(c, up, down) {
+  $("panel").innerHTML = `
+    <span class="area"><i style="background:${areaColor[c.area]}"></i>${esc(areaName[c.area])}</span>
+    <h3>${esc(c.title)}</h3>
+    <dl>
+      <dt>ID</dt><dd><code>${esc(c.id)}</code></dd>
+      <dt>Size</dt><dd>${esc(c.size)}</dd>
+      <dt>Wave</dt><dd>${c.wave} of ${waves}</dd>
+      <dt>File</dt><dd><code>${esc(c.file)}</code></dd>
+    </dl>
+    ${c.summary ? `<h4>Summary</h4><p>${esc(c.summary)}</p>` : ""}
+    ${c.doneWhen ? `<h4>Done when</h4><p>${esc(c.doneWhen)}</p>` : ""}
+    <h4>Depends on (${c.dependsOn.length}${up.size > c.dependsOn.length ? `, ${up.size} incl. indirect` : ""})</h4>
+    ${linkList(c.dependsOn)}
+    <h4>Unlocks (${c.unlocks.length}${down.size > c.unlocks.length ? `, ${down.size} incl. indirect` : ""})</h4>
+    ${linkList(c.unlocks)}
+    <div class="legend-key"><span style="--k:var(--edge-hi)">Path from its dependencies</span><span style="--k:var(--accent)">Path to what it unlocks</span></div>`;
+  $("panel").querySelectorAll("[data-go]").forEach((b) => (b.onclick = () => { select(b.dataset.go); nodes[b.dataset.go].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" }); }));
+}
+
+paths.forEach((p, i) => { if (critEdges.has(edges[i].from + ">" + edges[i].to)) p.classList.add("crit-cand"); });
+$("crit").onchange = () => {
+  const on = $("crit").checked;
+  Object.entries(nodes).forEach(([id, n]) => n.classList.toggle("crit", on && crit.has(id)));
+  paths.forEach((p) => { p.classList.toggle("crit", on && p.classList.contains("crit-cand")); if (!p.classList.contains("up") && !p.classList.contains("down")) p.setAttribute("marker-end", markerFor(p)); });
+};
+$("scroller").onclick = () => select(null);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") select(null); });
+new ResizeObserver(layoutEdges).observe(canvas);
+window.addEventListener("load", layoutEdges);
+layoutEdges();
+</script>
+</body>
+</html>

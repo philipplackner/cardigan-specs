@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Foundations</title>
+<!--
+  Cardigan UI mockups · Foundations
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Foundations</h1>
+      <p>Graphite tokens and components shared by web (React) and the app (Compose Multiplatform). Colors switch with the system theme.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html">Overview</a><a href="foundations.html" aria-current="page">Foundations</a><a href="auth.html">Log in & register</a><a href="board-list.html">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html">Card detail</a><a href="labels.html">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec">
+    <div class="g-group"><h3>Color tokens</h3>
+      <div class="fd-grid">
+        <div class="fd-sw"><i style="background:var(--bg)"></i><b>Background</b><code data-tok="--bg">#F7F8FA</code><code>App background</code></div>
+        <div class="fd-sw"><i style="background:var(--surface)"></i><b>Surface</b><code data-tok="--surface">#FFFFFF</code><code>Cards, panels, dialogs</code></div>
+        <div class="fd-sw"><i style="background:var(--col)"></i><b>Column</b><code data-tok="--col">#EEF0F4</code><code>Column trays</code></div>
+        <div class="fd-sw"><i style="background:var(--side)"></i><b>Sidebar</b><code data-tok="--side">#F2F4F7</code><code>Sidebar background</code></div>
+        <div class="fd-sw"><i style="background:var(--fg)"></i><b>Text</b><code data-tok="--fg">#151821</code><code>Primary text</code></div>
+        <div class="fd-sw"><i style="background:var(--muted)"></i><b>Muted text</b><code data-tok="--muted">#5F6676</code><code>Secondary text, metadata</code></div>
+        <div class="fd-sw"><i style="background:var(--faint)"></i><b>Faint</b><code data-tok="--faint">#98A0AE</code><code>Placeholders, disabled</code></div>
+        <div class="fd-sw"><i style="background:var(--line)"></i><b>Line</b><code data-tok="--line">#E1E4EA</code><code>Borders and dividers</code></div>
+        <div class="fd-sw"><i style="background:var(--line-strong)"></i><b>Line strong</b><code data-tok="--line-strong">#CBD0D9</code><code>Inputs, outlined buttons</code></div>
+        <div class="fd-sw"><i style="background:var(--accent)"></i><b>Accent</b><code data-tok="--accent">#2B59F0</code><code>Primary actions, focus, selection</code></div>
+        <div class="fd-sw"><i style="background:var(--accent-soft)"></i><b>Accent soft</b><code data-tok="--accent-soft">#E7EDFE</code><code>Selected backgrounds, focus rings</code></div>
+        <div class="fd-sw"><i style="background:var(--danger)"></i><b>Danger</b><code data-tok="--danger">#D23B3B</code><code>Destructive actions, errors</code></div>
+        <div class="fd-sw"><i style="background:var(--success)"></i><b>Success</b><code data-tok="--success">#1F9D57</code><code>Confirmations</code></div>
+      </div>
+    </div>
+    <div class="g-group"><h3>Label palette · 20 colors</h3>
+      <div class="fd-pal">
+        <div><i data-color="Red" style="--h:0;--s:74%"></i>Red</div>
+        <div><i data-color="Orange" style="--h:22;--s:85%"></i>Orange</div>
+        <div><i data-color="Amber" style="--h:38;--s:90%"></i>Amber</div>
+        <div><i data-color="Yellow" style="--h:50;--s:82%"></i>Yellow</div>
+        <div><i data-color="Lime" style="--h:80;--s:62%"></i>Lime</div>
+        <div><i data-color="Green" style="--h:130;--s:50%"></i>Green</div>
+        <div><i data-color="Emerald" style="--h:155;--s:62%"></i>Emerald</div>
+        <div><i data-color="Teal" style="--h:172;--s:62%"></i>Teal</div>
+        <div><i data-color="Cyan" style="--h:188;--s:72%"></i>Cyan</div>
+        <div><i data-color="Sky" style="--h:200;--s:78%"></i>Sky</div>
+        <div><i data-color="Blue" style="--h:218;--s:80%"></i>Blue</div>
+        <div><i data-color="Indigo" style="--h:235;--s:68%"></i>Indigo</div>
+        <div><i data-color="Violet" style="--h:255;--s:70%"></i>Violet</div>
+        <div><i data-color="Purple" style="--h:275;--s:62%"></i>Purple</div>
+        <div><i data-color="Fuchsia" style="--h:295;--s:62%"></i>Fuchsia</div>
+        <div><i data-color="Pink" style="--h:325;--s:70%"></i>Pink</div>
+        <div><i data-color="Rose" style="--h:345;--s:74%"></i>Rose</div>
+        <div><i data-color="Brown" style="--h:25;--s:38%"></i>Brown</div>
+        <div><i data-color="Olive" style="--h:62;--s:32%"></i>Olive</div>
+        <div><i data-color="Slate" style="--h:215;--s:16%"></i>Slate</div>
+      </div><p class="help" style="margin:0">One hue per color, lightened automatically in dark mode so every color stays readable on both backgrounds.</p>
+    </div>
+    <div class="g-group"><h3>Type</h3>
+      <div class="fd-type ui">
+        <div><small>Page title</small><span style="font:600 22px/1.2 var(--f-ui);letter-spacing:-.02em">Log in to Cardigan</span><small>Geist 600 · 22/26 · phone 26–28</small></div>
+        <div><small>Screen title</small><span style="font:600 18px/1.2 var(--f-ui);letter-spacing:-.015em">Cardigan v1</span><small>Geist 600 · 18/22</small></div>
+        <div><small>Card title</small><span style="font:500 13.5px/1.38 var(--f-ui)">Single-flight token refresh in the Ktor client</span><small>Geist 500 · 13.5/19 · phone 14.5</small></div>
+        <div><small>Body</small><span style="font:400 13.5px/1.5 var(--f-ui)">When several requests get a 401 at the same time…</span><small>Geist 400 · 13.5/20 · phone 15</small></div>
+        <div><small>Label</small><span style="font:500 12.5px/1 var(--f-ui)">Description</span><small>Geist 500 · 12.5</small></div>
+        <div><small>ID &amp; metadata</small><span style="font:500 12px/1 var(--f-mono);color:var(--muted)">CRD-109 · Updated 2 hours ago</span><small>Geist Mono 400–500 · 11–12</small></div>
+        <div><small>Section label</small><span style="font:500 11px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">Boards</span><small>Geist Mono 500 · 11 · caps</small></div>
+      </div>
+    </div>
+    <div class="g-group"><h3>Space &amp; shape</h3>
+      <div class="fd-comp">
+        <div class="fd-box"><h4>Spacing (px)</h4>
+          <div class="fd-scale">
+            <div><i style="width:4px;height:4px"></i>4</div>
+            <div><i style="width:8px;height:8px"></i>8</div>
+            <div><i style="width:12px;height:12px"></i>12</div>
+            <div><i style="width:16px;height:16px"></i>16</div>
+            <div><i style="width:20px;height:20px"></i>20</div>
+            <div><i style="width:24px;height:24px"></i>24</div>
+            <div><i style="width:32px;height:32px"></i>32</div>
+          </div><h4>Radius</h4>
+          <div class="fd-row">
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:4px"></i>4<br>Key, checkbox</div>
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:6px"></i>6<br>Controls</div>
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:8px"></i>8<br>Cards, menus</div>
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:10px"></i>10<br>Columns</div>
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:12px"></i>12<br>Dialogs</div>
+            <div style="display:grid;gap:6px;justify-items:center;font:400 11px/1.3 var(--f-mono);color:var(--muted);text-align:center;width:64px"><i style="display:block;width:40px;height:40px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:20px"></i>999<br>Label chips</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="g-group"><h3>Components</h3>
+      <div class="fd-comp">
+        <div class="fd-box ui"><h4>Buttons</h4><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-ghost">Cancel</span><span class="btn btn-danger">Delete</span><span class="btn btn-danger-ghost"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete</span><span class="btn btn-primary"><span class="spin"></span>Saving…</span><span class="btn btn-primary dis">Disabled</span>
+          <div class="help" style="width:100%">Height 34 on web, 44 on touch screens.</div>
+        </div>
+        <div class="fd-box ui"><h4>Icon buttons</h4><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span><span class="ib on" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span><span class="ib" title="Filter" aria-label="Filter"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"></path></svg><span class="badge">2</span></span><span class="ib" title="Close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></div>
+        <div class="fd-box ui"><h4>Inputs</h4>
+          <div class="field"><label>Email</label>
+            <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+          </div>
+          <div class="field"><label>Board name</label>
+            <div class="input focus"><span style="flex:1;min-width:0">Cardigan v1<span class="caret"></span></span></div>
+          </div>
+          <div class="field"><label>Key</label>
+            <div class="input err"><span style="flex:1;min-width:0">CRD</span></div>
+            <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>You already have a board with the key CRD.</div>
+          </div>
+          <div class="field"><label>Key</label>
+            <div class="input ro"><span style="flex:1;min-width:0">CRD</span></div>
+            <div class="help">The key can’t be changed.</div>
+          </div>
+        </div>
+        <div class="fd-box ui"><h4>Labels &amp; keys</h4>
+          <div class="fd-row"><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Red" style="--h:0;--s:74%">bug</span><span class="lab" data-color="Amber" style="--h:38;--s:90%">infra</span><span class="lab" data-color="Pink" style="--h:325;--s:70%">design</span><span class="lab" data-color="Slate" style="--h:215;--s:16%">docs</span></div>
+          <div class="fd-row"><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api</span><span class="lab chip" data-color="Teal" style="--h:172;--s:62%">web</span><span class="lab chip" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab chip" data-color="Red" style="--h:0;--s:74%">bug</span><span class="lab chip" data-color="Blue" style="--h:218;--s:80%">api<svg class="ico x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"></path></svg></span></div>
+          <div class="fd-row"><span class="key">CRD</span><span class="key">RAY</span><span class="key">HOME</span><span class="cb"></span><span class="cb on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+          <div class="help">Dots on card tiles; chips in card detail and filters.</div>
+        </div>
+        <div class="fd-box ui"><h4>Card tile</h4>
+          <div style="display:grid;gap:8px;background:var(--col);padding:8px;border-radius:10px;border:1px solid var(--line)">
+            <div class="tile">
+              <div class="t-id">CRD-109</div>
+              <div class="t-title">Single-flight token refresh in the Ktor client</div>
+              <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span><span class="lab" data-color="Blue" style="--h:218;--s:80%">api</span></div>
+            </div>
+            <div class="tile sel">
+              <div class="t-id">CRD-112</div>
+              <div class="t-title">Column menu with move left and right</div>
+              <div class="t-labs"><span class="lab" data-color="Teal" style="--h:172;--s:62%">web</span></div>
+            </div>
+            <div class="tile ph">
+              <div class="t-id">CRD-115</div>
+              <div class="t-title">Long-press drag with auto-scroll between columns</div>
+              <div class="t-labs"><span class="lab" data-color="Violet" style="--h:255;--s:70%">mobile</span></div>
+            </div>
+          </div>
+          <div class="help">Default · selected (open in panel) · drag placeholder</div>
+        </div>
+        <div class="fd-box ui"><h4>Menu</h4>
+          <div style="position:relative;height:200px">
+            <div class="menu l" style="top:0">
+              <div class="mi dis"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Move left</div>
+              <div class="mi hl"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>Move right</div>
+              <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"></path><path d="M17 14l3 3-4 4h-3v-3z"></path></svg>Rename</div>
+              <div class="msep"></div>
+              <div class="mi danger"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete column</div>
+            </div>
+          </div>
+        </div>
+        <div class="fd-box ui"><h4>Dialog</h4>
+          <div class="dlg"><h2>Delete board “Cardigan v1”?</h2><p>Its 4 columns and 12 cards will be deleted too. This can’t be undone.</p>
+            <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete board</span></div>
+          </div>
+        </div>
+        <div class="fd-box ui"><h4>Toasts &amp; banners</h4>
+          <div class="toast static"><span class="dot" style="background:var(--success)"></span><span>Imported “Cardigan v1” with the key CRDB.</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></div>
+          <div class="toast static"><span class="dot" style="background:var(--danger)"></span><span>Couldn’t move CRD-115. It’s back in In progress.</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></div>
+          <div class="banner err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg><span>Email or password is incorrect.</span></div>
+          <div class="banner info"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 11v5.5M12 7.8v.1"></path></svg><span>Your session has expired. Log in again to continue.</span></div>
+        </div>
+        <div class="fd-box ui"><h4>Loading &amp; empty</h4>
+          <div class="tile">
+            <div class="sk" style="width:48px;height:9px;"></div>
+            <div class="sk" style="width:90%;height:12px;"></div>
+            <div class="sk" style="width:60%;height:12px;"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:10px;display:flex">
+            <div class="state">
+              <div class="si"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg></div><h3>No boards yet</h3><p>Create a board to start adding cards.</p>
+              <div class="acts"><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="g-group"><h3>Breakpoints (proposal)</h3>
+      <div class="tbl-wrap"><table class="fd-tbl"><thead><tr><th>Layout</th><th>Web width</th><th>App window</th><th>Navigation</th><th>Card detail</th></tr></thead><tbody><tr><td>Phone</td><td>&lt; 640px</td><td>&lt; 600dp</td><td>Board list + top bar menu</td><td>Full screen</td></tr><tr><td>Tablet</td><td>640–1023px</td><td>600–839dp</td><td>Sidebar (224px)</td><td>Side panel 420px</td></tr><tr><td>Desktop / tablet landscape</td><td>≥ 1024px</td><td>≥ 840dp</td><td>Sidebar (248px)</td><td>Side panel 452px</td></tr></tbody></table></div>
+    </div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

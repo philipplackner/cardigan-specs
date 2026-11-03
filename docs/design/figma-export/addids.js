@@ -1,0 +1,1 @@
+const fs=require('fs');const st=JSON.parse(fs.readFileSync('state.json'));const ids=JSON.parse(process.argv[2]);Object.assign(st.components,ids);fs.writeFileSync('state.json',JSON.stringify(st,null,1));console.log(Object.keys(st.components).length,'components');

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Log in & register</title>
+<!--
+  Cardigan UI mockups · Log in & register
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Log in & register</h1>
+      <p>Log in and register are the only signed-out screens. There is no password reset or email verification in v1.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html">Overview</a><a href="foundations.html">Foundations</a><a href="auth.html" aria-current="page">Log in & register</a><a href="board-list.html">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html">Card detail</a><a href="labels.html">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec">
+    <!-- ================= Log in · all sizes ================= -->
+    <div class="g-group" id="log-in-all-sizes"><h3>Log in · all sizes</h3><div class="g-row">
+
+      <!-- Screen: Log in & register | State: Log in | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="auth" data-state="log-in" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Log in at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Your password</span></span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Log in</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Log in | Size: tablet (834 × 1112) -->
+      <figure class="g-item" data-screen="auth" data-state="log-in" data-size="tablet" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Tablet portrait · 834 Log in at full size" data-w="834" data-h="1112" data-base="0.42">
+        <div class="fr ui fr-web fr-tablet" style="width: 834px; height: 1112px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Your password</span></span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Tablet portrait · 834</span><b>Log in</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Log in | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="auth" data-state="log-in" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Log in at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Your password</span></span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Log in</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Register · all sizes ================= -->
+    <div class="g-group" id="register-all-sizes"><h3>Register · all sizes</h3><div class="g-row">
+
+      <!-- Screen: Log in & register | State: Register | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="auth" data-state="register" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Register at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Create a password</span></span></div>
+                    <div class="rules"><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>12+ characters</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Lowercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Uppercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Type it again</span></span></div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Register</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Register | Size: tablet (834 × 1112) -->
+      <figure class="g-item" data-screen="auth" data-state="register" data-size="tablet" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Tablet portrait · 834 Register at full size" data-w="834" data-h="1112" data-base="0.42">
+        <div class="fr ui fr-web fr-tablet" style="width: 834px; height: 1112px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Create a password</span></span></div>
+                    <div class="rules"><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>12+ characters</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Lowercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Uppercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Type it again</span></span></div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Tablet portrait · 834</span><b>Register</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Register | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="auth" data-state="register" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Register at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">you@example.com</span></span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Create a password</span></span></div>
+                    <div class="rules"><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>12+ characters</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Lowercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Uppercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input"><span style="flex:1;min-width:0"><span class="ph">Type it again</span></span></div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Register</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= States ================= -->
+    <div class="g-group" id="states"><h3>States</h3><div class="g-row">
+
+      <!-- Screen: Log in & register | State: Wrong email or password | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="auth" data-state="wrong-email-or-password" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Wrong email or password at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="banner err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg><span>Email or password is incorrect.</span></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Wrong email or password</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Wrong email or password | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="auth" data-state="wrong-email-or-password" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Wrong email or password at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="banner err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg><span>Email or password is incorrect.</span></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Wrong email or password</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Session expired | Size: desktop (1440 × 900) | Note: Shown after a failed token refresh logs the user out. -->
+      <figure class="g-item" data-screen="auth" data-state="session-expired" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Session expired at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="banner info"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 11v5.5M12 7.8v.1"></path></svg><span>Your session has expired. Log in again to continue.</span></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input focus"><span style="flex:1;min-width:0"><span class="ph">Your password</span></span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Session expired</b><span class="note">Shown after a failed token refresh logs the user out.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Session expired | Size: phone (390 × 844) | Note: Shown after a failed token refresh logs the user out. -->
+      <figure class="g-item" data-screen="auth" data-state="session-expired" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Session expired at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="banner info"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 11v5.5M12 7.8v.1"></path></svg><span>Your session has expired. Log in again to continue.</span></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input focus"><span style="flex:1;min-width:0"><span class="ph">Your password</span></span></div>
+                  </div><span class="btn btn-primary block">Log in</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Session expired</b><span class="note">Shown after a failed token refresh logs the user out.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Live password check and mismatch | Size: desktop (1440 × 900) | Note: Each rule shows a cross until it is met, then a check. It updates with every keystroke. -->
+      <figure class="g-item" data-screen="auth" data-state="live-password-check-and-mismatch" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Live password check and mismatch at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                    <div class="rules"><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>12+ characters</span><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Lowercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Uppercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">•••••••••••</span></div>
+                    <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>Passwords don’t match.</div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Live password check and mismatch</b><span class="note">Each rule shows a cross until it is met, then a check. It updates with every keystroke.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Live password check and mismatch | Size: phone (390 × 844) | Note: Each rule shows a cross until it is met, then a check. It updates with every keystroke. -->
+      <figure class="g-item" data-screen="auth" data-state="live-password-check-and-mismatch" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Live password check and mismatch at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                    <div class="rules"><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>12+ characters</span><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Lowercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Uppercase letter</span><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input err"><span style="flex:1;min-width:0">•••••••••••</span></div>
+                    <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>Passwords don’t match.</div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Live password check and mismatch</b><span class="note">Each rule shows a cross until it is met, then a check. It updates with every keystroke.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Email already registered | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="auth" data-state="email-already-registered" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Email already registered at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="auth">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:center;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Create your account</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input err"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                    <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>An account with this email already exists.</div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                    <div class="rules"><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>12+ characters</span><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Lowercase letter</span><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Uppercase letter</span><span class="ok"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Digit</span></div>
+                  </div>
+                  <div class="field"><label>Repeat password</label>
+                    <div class="input"><span style="flex:1;min-width:0">•••••••••••</span></div>
+                  </div><span class="btn btn-primary block">Create account</span>
+                </div>
+                <div class="auth-alt">Already have an account? <a>Log in</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Email already registered</b></figcaption>
+      </figure>
+
+      <!-- Screen: Log in & register | State: Logging in | Size: phone (390 × 844) | Note: Fields are disabled while the request runs. -->
+      <figure class="g-item" data-screen="auth" data-state="logging-in" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Logging in at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="auth ph">
+              <div class="auth-box">
+                <div class="brand" style="justify-content:flex-start;font-size:18px"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+                <div class="auth-card">
+                  <div><h1 class="auth-h">Log in to Cardigan</h1></div>
+                  <div class="field"><label>Email</label>
+                    <div class="input dis"><span style="flex:1;min-width:0">philipp@example.com</span></div>
+                  </div>
+                  <div class="field"><label>Password</label>
+                    <div class="input dis"><span style="flex:1;min-width:0">••••••••••••••</span></div>
+                  </div><span class="btn btn-primary block"><span class="spin"></span>Logging in…</span>
+                </div>
+                <div class="auth-alt">No account yet? <a>Create one</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Logging in</b><span class="note">Fields are disabled while the request runs.</span></figcaption>
+      </figure>
+    </div></div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

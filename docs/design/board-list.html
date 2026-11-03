@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Board list</title>
+<!--
+  Cardigan UI mockups · Board list
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Board list</h1>
+      <p>Home screen after login. Grid of tiles on tablet and desktop, list on phones. Tiles show name, key, card count and last update. Export is only in the board view menu.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html">Overview</a><a href="foundations.html">Foundations</a><a href="auth.html">Log in & register</a><a href="board-list.html" aria-current="page">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html">Card detail</a><a href="labels.html">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec">
+    <!-- ================= All sizes ================= -->
+    <div class="g-group" id="all-sizes"><h3>All sizes</h3><div class="g-row">
+
+      <!-- Screen: Board list | State: Board list | Size: phone (390 × 844) | Note: The menu holds Import board, Labels and Log out. In the app, pull down to refresh instead of the refresh button. -->
+      <figure class="g-item" data-screen="board-list" data-state="board-list" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Board list at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Board list</b><span class="note">The menu holds Import board, Labels and Log out. In the app, pull down to refresh instead of the refresh button.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Board list | Size: tablet (834 × 1112) | Note: Same sidebar as desktop. -->
+      <figure class="g-item" data-screen="board-list" data-state="board-list" data-size="tablet" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Tablet portrait · 834 Board list at full size" data-w="834" data-h="1112" data-base="0.42">
+        <div class="fr ui fr-web fr-tablet" style="width: 834px; height: 1112px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Tablet portrait · 834</span><b>Board list</b><span class="note">Same sidebar as desktop.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Board list | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="board-list" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Board list at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Board list</b></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Loading, empty, error ================= -->
+    <div class="g-group" id="loading-empty-error"><h3>Loading, empty, error</h3><div class="g-row">
+
+      <!-- Screen: Board list | State: Loading | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="loading" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Loading at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                    <div class="btile">
+                      <div class="sk" style="width:42px;height:18px;"></div>
+                      <div class="sk" style="width:70%;height:16px;"></div>
+                      <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)">
+                        <div class="sk" style="width:60px;height:10px;"></div>
+                        <div class="sk" style="width:90px;height:10px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Loading</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Loading | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="board-list" data-state="loading" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Loading at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="sk" style="width:60%;height:14px;"></div>
+                      <div class="sk" style="width:40%;height:10px;"></div>
+                    </div>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="sk" style="width:60%;height:14px;"></div>
+                      <div class="sk" style="width:40%;height:10px;"></div>
+                    </div>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="sk" style="width:60%;height:14px;"></div>
+                      <div class="sk" style="width:40%;height:10px;"></div>
+                    </div>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="sk" style="width:60%;height:14px;"></div>
+                      <div class="sk" style="width:40%;height:10px;"></div>
+                    </div>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="sk" style="width:60%;height:14px;"></div>
+                      <div class="sk" style="width:40%;height:10px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Loading</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: No boards yet | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="no-boards-yet" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 No boards yet at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="state">
+                    <div class="si"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg></div><h3>No boards yet</h3><p>Create a board to start adding cards, or import a board from a JSON export.</p>
+                    <div class="acts"><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>No boards yet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: No boards yet | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="board-list" data-state="no-boards-yet" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 No boards yet at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1></div>
+                <div class="state">
+                  <div class="si"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg></div><h3>No boards yet</h3><p>Create a board to start adding cards, or import a board from a JSON export.</p>
+                  <div class="acts"><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>No boards yet</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Couldn’t load boards | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="couldn-t-load-boards" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Couldn’t load boards at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="state">
+                    <div class="si err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.2 9.5 4.3 4.3 0 0 0 7 18z"></path><path d="M4 4l16 16"></path></svg></div><h3>Couldn’t load your boards</h3><p>Check your connection and try again.</p>
+                    <div class="acts"><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg>Try again</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Couldn’t load boards</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Couldn’t load boards | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="board-list" data-state="couldn-t-load-boards" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Couldn’t load boards at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1></div>
+                <div class="state">
+                  <div class="si err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.2 9.5 4.3 4.3 0 0 0 7 18z"></path><path d="M4 4l16 16"></path></svg></div><h3>Couldn’t load your boards</h3><p>Check your connection and try again.</p>
+                  <div class="acts"><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg>Try again</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Couldn’t load boards</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Pull to refresh | Size: phone (390 × 844) | Note: App only. Web uses the refresh button. -->
+      <figure class="g-item" data-screen="board-list" data-state="pull-to-refresh" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Pull to refresh at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="ptr"><span class="spin" style="color:var(--accent)"></span>Refreshing</div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Pull to refresh</b><span class="note">App only. Web uses the refresh button.</span></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Scrolling on phones ================= -->
+    <div class="g-group" id="scrolling-on-phones"><h3>Scrolling on phones</h3><div class="g-row">
+
+      <!-- Screen: Board list | State: At the top | Size: phone (390 × 844) | Note: Large “Boards” title under a pinned top bar. -->
+      <figure class="g-item" data-screen="board-list" data-state="at-the-top" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 At the top at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">14 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Garden irrigation</div>
+                      <div class="br-sub"><span class="key">GARD</span><span>6 cards</span><span>·</span><span>Aug 21</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Bike repairs</div>
+                      <div class="br-sub"><span class="key">BIKE</span><span>3 cards</span><span>·</span><span>Aug 14</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Thesis notes</div>
+                      <div class="br-sub"><span class="key">THES</span><span>31 cards</span><span>·</span><span>Jul 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Recipe app</div>
+                      <div class="br-sub"><span class="key">RCP</span><span>18 cards</span><span>·</span><span>Jul 22</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Advent of Code</div>
+                      <div class="br-sub"><span class="key">AOC</span><span>25 cards</span><span>·</span><span>Jul 3</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Blog posts</div>
+                      <div class="br-sub"><span class="key">BLOG</span><span>11 cards</span><span>·</span><span>Jun 19</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Kotlin course</div>
+                      <div class="br-sub"><span class="key">KOT</span><span>14 cards</span><span>·</span><span>Jun 2</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Tax return 2026</div>
+                      <div class="br-sub"><span class="key">TAX</span><span>5 cards</span><span>·</span><span>May 27</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>At the top</b><span class="note">Large “Boards” title under a pinned top bar.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Scrolled | Size: phone (390 × 844) | Note: Once the large title scrolls under the bar, “Boards” moves into the bar and a divider appears. The actions stay in place. -->
+      <figure class="g-item" data-screen="board-list" data-state="scrolled" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Scrolled at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar raised">
+                <div class="ab-title"><b>Boards</b></div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div><i class="sbind" style="top:250px;height:150px"></i>
+              <div class="content" style="margin-top:-150px">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">14 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Garden irrigation</div>
+                      <div class="br-sub"><span class="key">GARD</span><span>6 cards</span><span>·</span><span>Aug 21</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Bike repairs</div>
+                      <div class="br-sub"><span class="key">BIKE</span><span>3 cards</span><span>·</span><span>Aug 14</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Thesis notes</div>
+                      <div class="br-sub"><span class="key">THES</span><span>31 cards</span><span>·</span><span>Jul 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Recipe app</div>
+                      <div class="br-sub"><span class="key">RCP</span><span>18 cards</span><span>·</span><span>Jul 22</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Advent of Code</div>
+                      <div class="br-sub"><span class="key">AOC</span><span>25 cards</span><span>·</span><span>Jul 3</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Blog posts</div>
+                      <div class="br-sub"><span class="key">BLOG</span><span>11 cards</span><span>·</span><span>Jun 19</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Kotlin course</div>
+                      <div class="br-sub"><span class="key">KOT</span><span>14 cards</span><span>·</span><span>Jun 2</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Tax return 2026</div>
+                      <div class="br-sub"><span class="key">TAX</span><span>5 cards</span><span>·</span><span>May 27</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Scrolled</b><span class="note">Once the large title scrolls under the bar, “Boards” moves into the bar and a divider appears. The actions stay in place.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: End of the list | Size: phone (390 × 844) | Note: The list ends with the board count; no paging, all boards load at once. -->
+      <figure class="g-item" data-screen="board-list" data-state="end-of-the-list" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 End of the list at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar raised">
+                <div class="ab-title"><b>Boards</b></div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div><i class="sbind" style="bottom:8px;height:150px"></i>
+              <div class="content" style="justify-content:flex-end;padding-bottom:24px">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">14 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Garden irrigation</div>
+                      <div class="br-sub"><span class="key">GARD</span><span>6 cards</span><span>·</span><span>Aug 21</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Bike repairs</div>
+                      <div class="br-sub"><span class="key">BIKE</span><span>3 cards</span><span>·</span><span>Aug 14</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Thesis notes</div>
+                      <div class="br-sub"><span class="key">THES</span><span>31 cards</span><span>·</span><span>Jul 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Recipe app</div>
+                      <div class="br-sub"><span class="key">RCP</span><span>18 cards</span><span>·</span><span>Jul 22</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Advent of Code</div>
+                      <div class="br-sub"><span class="key">AOC</span><span>25 cards</span><span>·</span><span>Jul 3</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Blog posts</div>
+                      <div class="br-sub"><span class="key">BLOG</span><span>11 cards</span><span>·</span><span>Jun 19</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Kotlin course</div>
+                      <div class="br-sub"><span class="key">KOT</span><span>14 cards</span><span>·</span><span>Jun 2</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Tax return 2026</div>
+                      <div class="br-sub"><span class="key">TAX</span><span>5 cards</span><span>·</span><span>May 27</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+                <div class="blist-end">14 boards</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>End of the list</b><span class="note">The list ends with the board count; no paging, all boards load at once.</span></figcaption>
+      </figure>
+    </div></div>
+    <!-- ================= Menus &amp; dialogs ================= -->
+    <div class="g-group" id="menus-dialogs"><h3>Menus &amp; dialogs</h3><div class="g-row">
+
+      <!-- Screen: Board list | State: Phone menu | Size: phone (390 × 844) | Note: Proposal: account email at the top of the menu, since there is no settings screen. -->
+      <figure class="g-item" data-screen="board-list" data-state="phone-menu" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Phone menu at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib on" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span>
+                <div class="menu r">
+                  <div class="mi hdr">Signed in as philipp@example.com</div>
+                  <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import board</div>
+                  <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+                  <div class="msep"></div>
+                  <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg>Log out</div>
+                </div></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Phone menu</b><span class="note">Proposal: account email at the top of the menu, since there is no settings screen.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Board tile menu | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="board-tile-menu" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Board tile menu at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile hov">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib on" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span>
+                        <div class="menu r">
+                          <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"></path><path d="M17 14l3 3-4 4h-3v-3z"></path></svg>Rename</div>
+                          <div class="msep"></div>
+                          <div class="mi danger"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete board</div>
+                        </div></span>
+                      </div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Board tile menu</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Board row menu | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="board-list" data-state="board-row-menu" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Board row menu at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib on" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span>
+                    <div class="menu r">
+                      <div class="mi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"></path><path d="M17 14l3 3-4 4h-3v-3z"></path></svg>Rename</div>
+                      <div class="msep"></div>
+                      <div class="mi danger"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"></path></svg>Delete board</div>
+                    </div></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Board row menu</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: New board | Size: desktop (1440 × 900) | Note: Key is prefilled from the name and can be edited before creating. -->
+      <figure class="g-item" data-screen="board-list" data-state="new-board" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 New board at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>New board</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input focus"><span style="flex:1;min-width:0">Garden irrigation<span class="caret"></span></span></div>
+                </div>
+                <div class="field"><label>Key</label>
+                  <div class="input"><span style="flex:1;min-width:0">GARD</span></div>
+                  <div class="help">2–5 uppercase letters. Card IDs will look like GARD-1. The key can’t be changed later.</div>
+                </div><p style="font-size:12.5px">New boards start with the columns To do, In progress and Done.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Create board</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>New board</b><span class="note">Key is prefilled from the name and can be edited before creating.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: New board | Size: phone (390 × 844) | Note: Key is prefilled from the name and can be edited before creating. -->
+      <figure class="g-item" data-screen="board-list" data-state="new-board" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 New board at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>New board</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input focus"><span style="flex:1;min-width:0">Garden irrigation<span class="caret"></span></span></div>
+                </div>
+                <div class="field"><label>Key</label>
+                  <div class="input"><span style="flex:1;min-width:0">GARD</span></div>
+                  <div class="help">2–5 uppercase letters. Card IDs will look like GARD-1. The key can’t be changed later.</div>
+                </div><p style="font-size:12.5px">New boards start with the columns To do, In progress and Done.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Create board</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>New board</b><span class="note">Key is prefilled from the name and can be edited before creating.</span></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: New board · key already used | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="new-board-key-already-used" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 New board · key already used at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>New board</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input"><span style="flex:1;min-width:0">Garden irrigation</span></div>
+                </div>
+                <div class="field"><label>Key</label>
+                  <div class="input focus err"><span style="flex:1;min-width:0">CRD<span class="caret"></span></span></div>
+                  <div class="errt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.1"></path></svg>You already have a board with the key CRD.</div>
+                </div><p style="font-size:12.5px">New boards start with the columns To do, In progress and Done.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary dis">Create board</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>New board · key already used</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Rename board | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="rename-board" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Rename board at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Rename board</h2>
+                <div class="field"><label>Name</label>
+                  <div class="input focus"><span style="flex:1;min-width:0">Cardigan v1<span class="caret"></span></span></div>
+                </div>
+                <div class="field"><label>Key</label>
+                  <div class="input ro"><span style="flex:1;min-width:0">CRD</span></div>
+                  <div class="help">The key can’t be changed.</div>
+                </div>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-primary">Save</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Rename board</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Delete board | Size: desktop (1440 × 900) -->
+      <figure class="g-item" data-screen="board-list" data-state="delete-board" data-size="desktop" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Desktop & tablet landscape · 1440 Delete board at full size" data-w="1440" data-h="900" data-base="0.6">
+        <div class="fr ui fr-web fr-wide" style="width: 1440px; height: 900px;">
+          <div class="fbody">
+            <div class="shell"><aside class="side">
+              <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div>
+              <div class="nav">
+                <div class="nav-i on"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>All boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V4.5h8l9 9-8 8z"></path><circle cx="8" cy="9" r="1.3"></circle></svg>Labels</div>
+              </div>
+              <div class="nav">
+                <div class="nav-h">Boards</div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Cardigan v1</span><span class="nk">CRD</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Raytracer</span><span class="nk">RAY</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Conference talk</span><span class="nk">TALK</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Home server</span><span class="nk">HOME</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Dotfiles cleanup</span><span class="nk">DOT</span></div>
+                <div class="nav-i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="5" height="16" rx="1.2"></rect><rect x="10" y="4" width="5" height="11" rx="1.2"></rect><rect x="16.5" y="4" width="4" height="7" rx="1.2"></rect></svg><span class="ell">Reading list</span><span class="nk">READ</span></div>
+                <div class="nav-i dim"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</div>
+              </div>
+              <div class="side-foot">
+                <div class="acct"><span class="av">P</span><span class="ell" style="flex:1">philipp@example.com</span><span class="ib" title="Log out" aria-label="Log out"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></span></div>
+              </div></aside>
+              <div class="main">
+                <div class="hdr"><h1 class="h-title">Boards</h1><span class="meta">6 boards</span><span class="sp"></span><span class="ib boxed" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="btn btn-secondary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"></path></svg>Import</span><span class="btn btn-primary"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New board</span></div>
+                <div class="content">
+                  <div class="bgrid">
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">CRD</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Cardigan v1</div>
+                      <div class="bt-meta"><span>12 cards</span><span>Updated 2 hours ago</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">RAY</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Raytracer</div>
+                      <div class="bt-meta"><span>23 cards</span><span>Updated Yesterday</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">TALK</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Conference talk</div>
+                      <div class="bt-meta"><span>7 cards</span><span>Updated Oct 9</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">HOME</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Home server</div>
+                      <div class="bt-meta"><span>9 cards</span><span>Updated Sep 30</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">DOT</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Dotfiles cleanup</div>
+                      <div class="bt-meta"><span>4 cards</span><span>Updated Sep 28</span></div>
+                    </div>
+                    <div class="btile">
+                      <div class="bt-top"><span class="key">READ</span><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span></div>
+                      <div class="bt-name">Reading list</div>
+                      <div class="bt-meta"><span>15 cards</span><span>Updated Aug 30</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete board “Cardigan v1”?</h2><p>Its 4 columns and 12 cards will be deleted too. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete board</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Desktop & tablet landscape · 1440</span><b>Delete board</b></figcaption>
+      </figure>
+
+      <!-- Screen: Board list | State: Delete board | Size: phone (390 × 844) -->
+      <figure class="g-item" data-screen="board-list" data-state="delete-board" data-size="phone" style="margin:0">
+      <div class="g-fw" tabindex="0" role="button" aria-label="Open Phone · 390 Delete board at full size" data-w="390" data-h="844" data-base="0.62">
+        <div class="fr ui fr-web fr-phone" style="width: 390px; height: 844px;">
+          <div class="fbody">
+            <div class="main">
+              <div class="appbar">
+                <div class="brand"><span class="mark"><i></i><i></i><i></i></span>Cardigan</div><span class="sp"></span><span class="ib" title="Refresh" aria-label="Refresh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v5h-5"></path></svg></span><span class="ib" title="New board" aria-label="New board"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span><span class="anchor"><span class="ib" title="Menu" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+              </div>
+              <div class="content">
+                <div class="ph-title" style="padding:2px 0 4px"><h1>Boards</h1><span class="meta">6 boards</span></div>
+                <div class="blist">
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Cardigan v1</div>
+                      <div class="br-sub"><span class="key">CRD</span><span>12 cards</span><span>·</span><span>2 hours ago</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Raytracer</div>
+                      <div class="br-sub"><span class="key">RAY</span><span>23 cards</span><span>·</span><span>Yesterday</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Conference talk</div>
+                      <div class="br-sub"><span class="key">TALK</span><span>7 cards</span><span>·</span><span>Oct 9</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Home server</div>
+                      <div class="br-sub"><span class="key">HOME</span><span>9 cards</span><span>·</span><span>Sep 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Dotfiles cleanup</div>
+                      <div class="br-sub"><span class="key">DOT</span><span>4 cards</span><span>·</span><span>Sep 28</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                  <div class="brow">
+                    <div class="br-main">
+                      <div class="bt-name ell">Reading list</div>
+                      <div class="br-sub"><span class="key">READ</span><span>15 cards</span><span>·</span><span>Aug 30</span></div>
+                    </div><span class="anchor"><span class="ib" title="Board menu" aria-label="Board menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scrim">
+              <div class="dlg"><h2>Delete board “Cardigan v1”?</h2><p>Its 4 columns and 12 cards will be deleted too. This can’t be undone.</p>
+                <div class="dlg-acts"><span class="btn btn-secondary">Cancel</span><span class="btn btn-danger">Delete board</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="g-cap"><span class="sz">Phone · 390</span><b>Delete board</b></figcaption>
+      </figure>
+    </div></div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>

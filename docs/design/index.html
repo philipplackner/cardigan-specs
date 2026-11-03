@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cardigan · Overview</title>
+<!--
+  Cardigan UI mockups · Overview
+  Static HTML. Each <figure class="g-item"> is one mockup frame:
+    data-screen = screen, data-state = state shown, data-size = phone (390) | tablet (834, portrait) | desktop (1440, also tablet landscape).
+  The frame markup (<div class="fr ...">) uses only classes from graphite.css (the design system).
+  gallery.css / gallery.js only lay out and scale the frames; they are not part of the product.
+  Requirements behind these screens: DECISIONS.md. Folder guide: README.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="graphite.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-head">
+    <div>
+      <div class="g-eyebrow">Cardigan · Graphite · Screens v1</div>
+      <h1>Cardigan screens</h1>
+      <p>Static mockups of every Cardigan v1 screen in the Graphite style, one page per flow. Web and the app share these designs at phone (390), tablet portrait (834) and desktop (1440) width; tablet landscape uses the desktop layout. Below the page list: the decisions the screens are based on.</p>
+    </div>
+    <div class="g-tools">
+      <div class="g-seg" role="group" aria-label="Theme"><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+    </div>
+  </header>
+</div>
+<nav class="g-nav" aria-label="Pages"><div class="g-wrap"><div class="g-tabs"><a href="index.html" aria-current="page">Overview</a><a href="foundations.html">Foundations</a><a href="auth.html">Log in & register</a><a href="board-list.html">Board list</a><a href="board-view.html">Board view</a><a href="card-detail.html">Card detail</a><a href="labels.html">Labels</a><a href="import-export.html">Import & export</a></div></div></nav>
+<main class="g-wrap" id="out">
+  <section class="g-sec"><div class="g-group"><h3>Pages</h3><div class="g-prose"><a class="g-card" style="text-decoration:none" href="foundations.html"><h4>Foundations</h4><p class="muted">Graphite tokens and components shared by web (React) and the app (Compose Multiplatform). Colors switch with the system theme.</p></a><a class="g-card" style="text-decoration:none" href="auth.html"><h4>Log in & register</h4><p class="muted">Log in and register are the only signed-out screens. There is no password reset or email verification in v1.</p></a><a class="g-card" style="text-decoration:none" href="board-list.html"><h4>Board list</h4><p class="muted">Home screen after login. Grid of tiles on tablet and desktop, list on phones. Tiles show name, key, card count and last update. Export is only in the board view menu.</p></a><a class="g-card" style="text-decoration:none" href="board-view.html"><h4>Board view</h4><p class="muted">Columns side by side with horizontal scroll. On phones the next column peeks in from the right. Column actions are all in the column’s … menu; cards are added inline at the bottom of a column.</p></a><a class="g-card" style="text-decoration:none" href="card-detail.html"><h4>Card detail</h4><p class="muted">Opens as a side panel on tablet and desktop, full screen on phones. The description is plain text. Changes are saved with the Save button. To move a card, drag it on the board.</p></a><a class="g-card" style="text-decoration:none" href="labels.html"><h4>Labels</h4><p class="muted">One label set for all boards, managed on its own page. Each label has a name and one of 20 colors.</p></a><a class="g-card" style="text-decoration:none" href="import-export.html"><h4>Import & export</h4><p class="muted">Each is one blocking request with a progress dialog. Export starts from the board’s … menu. Import starts from the board list; on the app it opens the system file picker.</p></a></div></div>
+    <div class="g-prose">
+      <div class="g-card"><h4>Look</h4><ul><li>Graphite: cool greys, cobalt accent, hairlines</li><li>Geist for UI, Geist Mono for IDs and metadata</li><li>Follows the system theme; no theme setting in the app</li><li>One shared look on web, Android and iOS</li></ul></div>
+      <div class="g-card"><h4>Cards</h4><ul><li>Title, plain-text description (no Markdown), labels</li><li>Created and updated time, read-only</li><li>ID = board key + number, e.g. CRD-109</li><li>Quick add (title only) at the bottom of a column</li><li>Side panel on wide screens, full screen on phones</li><li>Explicit Save; unsaved changes are confirmed</li><li>Moved between columns by drag &amp; drop only</li></ul></div>
+      <div class="g-card"><h4>Boards &amp; columns</h4><ul><li>Name + key (2–5 uppercase letters, unique, fixed after creation)</li><li>New boards get To do / In progress / Done</li><li>Grid of tiles (list on phones): name, key, card count, last update</li><li>Phone board scrolls sideways</li><li>Column actions in a … menu</li><li>Deleting a column deletes its cards after a confirm</li></ul></div>
+      <div class="g-card"><h4>Labels, search &amp; filter</h4><ul><li>Labels are per user, shared by all boards</li><li>20-color fixed palette</li><li>Own Labels page; no inline creation in the picker</li><li>Search matches title, description and card ID</li><li>Several labels match any (OR)</li></ul></div>
+      <div class="g-card"><h4>Account</h4><ul><li>Register: email, password, repeat password</li><li>Password: 12+ characters with a lowercase letter, an uppercase letter and a digit, checked live (cross → check) while typing</li><li>No settings screen; Log out in the sidebar (wide) or menu (phone)</li><li>Session expiry returns to Log in with a message</li></ul></div>
+      <div class="g-card"><h4>Import &amp; export</h4><ul><li>Export from the board view … menu</li><li>Web import: dialog with drop zone; app: system file picker</li><li>Files up to 5 MB</li><li>Key already used → ask for a new key</li><li>After import: stay on the board list; a toast confirms</li></ul></div>
+      <div class="g-card"><h4>Navigation &amp; sizes</h4><ul><li>Web and app share one set of designs: phone, tablet portrait, desktop</li><li>Tablet landscape uses the desktop layout</li><li>Tablet and desktop: persistent sidebar; phone: board list + menu</li><li>App refreshes by pulling down; web has a refresh button</li><li>All deletions use a confirmation dialog</li></ul></div>
+    </div>
+    <div class="g-card" style="max-width:820px"><h4>Proposals to confirm (not from the plan)</h4><ul><li>Breakpoints: web phone below 640px, tablet 640–1023px, desktop from 1024px; app tablet layout from 600dp width.</li><li>Search and label filter live in the board header (wide) or open from the top bar (phone).</li><li>Search and label filter combine: a card must match the text and have one of the selected labels.</li><li>Quick add keeps the field open after Enter so several cards can be added in a row.</li><li>Time format: relative for recent updates (“2 hours ago”), dates after a week.</li></ul></div>
+  </section>
+</main>
+<script src="gallery.js"></script>
+</body>
+</html>
