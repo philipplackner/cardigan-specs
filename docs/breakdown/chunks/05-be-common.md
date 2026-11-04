@@ -6,16 +6,16 @@
 | Area | Backend |
 | Size | M |
 | Wave | 2 |
-| Depends on | `be-scaffolding` (service skeleton, migrations, test setup), `api-contract` (`domain-user`, `text-length` and the shared error categories) |
+| Depends on | `be-scaffolding` (service skeleton, test setup), `api-contract` (`domain-user`, `text-length` and the shared error categories) |
 | Unlocks | `be-auth`, `be-boards`, `be-labels`, `mob-api-client`, `web-api-client` |
 
 ## Goal
-Cross-cutting backend foundation: security filter chain with JWT verification and current-user principal, users table, global error handling per the shared error model, request validation, SpringDoc with an exported OpenAPI spec, and test helpers for authenticated requests.
+Cross-cutting backend foundation: security filter chain with JWT verification and current-user principal, users table in the `:user` module, global error handling per the shared error model, request validation, SpringDoc with an exported OpenAPI spec, and test helpers for authenticated requests.
 
 ## In scope
 - Security filter chain: JWT access-token verification, public vs. protected routes
 - Current-user principal available to every controller
-- Users table per `domain-user` (identity, email, password hash, timestamps)
+- Users table per `domain-user` (identity, email, password hash, timestamps), in the `:user` module and its schema `user_service`, not in `:common`
 - Global error handling producing the shared error model
 - Request validation incl. `text-length` counting and field limits
 - SpringDoc setup and an exported OpenAPI spec file the clients generate from
@@ -27,7 +27,7 @@ Cross-cutting backend foundation: security filter chain with JWT verification an
 - Any domain feature endpoints
 
 ## Builds on
-- `be-scaffolding`: service skeleton, migrations, test setup
+- `be-scaffolding`: service skeleton, test setup
 - `api-contract`: user rules, text limits, error categories
 
 ## Provides
@@ -43,7 +43,7 @@ Cross-cutting backend foundation: security filter chain with JWT verification an
 ## Decisions from the breakdown
 - The wire contract is code-first: the backend generates the OpenAPI spec with SpringDoc, clients generate code from it. Behavioral rules come from the shared specs in this repo.
 - Custom JWT auth: 15-minute access tokens, 30-day refresh tokens (user decision). Supabase Auth is not used.
-- Owns the users table and JWT verification so auth, boards and labels can be built in parallel (user decision).
+- This chunk builds the users table and JWT verification so auth, boards and labels can be built in parallel (user decision). The table's code and schema belong to the `:user` module.
 
 ## Open questions for the deep-dive session
 - JWT signing (HS256 secret vs. RS256 key pair) — verification here, issuing in `be-auth`

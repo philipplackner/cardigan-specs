@@ -10,29 +10,31 @@
 | Unlocks | `be-common` |
 
 ## Goal
-Spring Boot (Kotlin) project, package/module layout, Postgres connection (local + Supabase via config), migration tooling, logging, health endpoint, Dockerfile and CI build/test.
+Spring Boot (Kotlin) modular monolith with the modules `:app`, `:common`, `:user` and `:board`, Postgres connection through `DB_*` config, schema handling per profile, console logging, liveness health endpoint, Dockerfile and CI build/test.
 
 ## In scope
 - Kotlin Spring Boot project and build setup
-- Package/module structure and layering conventions
-- Postgres: local (Docker) for development, Supabase for production via config
-- Migration tooling with an initial empty migration
-- Logging, health endpoint
+- Gradle modules `:app`, `:common`, `:user` and `:board`, and layering conventions
+- Postgres: the Supabase dev branch through the session pooler for development. Any other Postgres works by pointing `DB_*` at it, with no compose file or extra profile
+- `dev` profile: Hibernate `update`, Flyway off
+- `prod` profile: Flyway on with `validate`, and no migration files yet
+- Console logging, liveness health endpoint
 - Dockerfile
-- CI: build + tests incl. DB-backed integration tests
+- CI: build + tests incl. one smoke test on a Testcontainers Postgres
 
 ## Out of scope
 - Error handling, security, SpringDoc, validation (`be-common`)
 - Server provisioning and CD (`infra-vps`)
+- Any migration file. The baseline migration is written from the entities before the first production deploy
 
 ## Builds on
 - Nothing (root chunk)
 
 ## Provides
-- Bootable service skeleton, migration pipeline, Postgres-backed test setup, container image
+- Bootable service skeleton, Flyway configuration for production, Postgres-backed test setup, container image
 
 ## Done when
-- Service boots locally against Postgres
+- Service boots with `dev` against the Supabase dev branch, and with `prod` against an empty Postgres
 - Health endpoint responds
 - CI builds and runs tests
 - Docker image builds
@@ -41,9 +43,9 @@ Spring Boot (Kotlin) project, package/module layout, Postgres connection (local 
 - Kotlin + Spring Boot (user decision).
 - PostgreSQL on Supabase, used purely as a database.
 
-## Open questions for the deep-dive session
-- Single module vs. multi-module Gradle build
-- Persistence approach (JPA, Spring Data JDBC, jOOQ, Exposed)
-- Flyway vs. Liquibase
-- Testcontainers for integration tests?
-- CI provider
+## Decisions from the deep-dive session
+- Multi-module Gradle build: `:app`, `:common`, `:user`, `:board`. Boards, columns, cards, labels and import/export are packages inside `:board`.
+- JPA with Spring Data.
+- Flyway, on `prod` only for now. Dev uses Hibernate `update`, so there are no migrations until the baseline.
+- Testcontainers Postgres 17 for tests, with Hibernate `create-drop` until the baseline migration exists.
+- GitHub Actions, running `./gradlew build`.

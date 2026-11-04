@@ -40,8 +40,8 @@
       "title": "Backend scaffolding & architecture",
       "area": "backend",
       "size": "M",
-      "summary": "Spring Boot (Kotlin) project, package/module layout, Postgres connection (local + Supabase via config), migration tooling, logging, health endpoint, Dockerfile and CI build/test.",
-      "doneWhen": "Service boots locally against Postgres with an empty migration, exposes a health endpoint, and CI builds and tests it.",
+      "summary": "Spring Boot (Kotlin) modular monolith with the modules :app, :common, :user and :board, Postgres connection through DB_* config, schema handling per profile, console logging, liveness health endpoint, Dockerfile and CI build/test.",
+      "doneWhen": "Service boots with dev against the Supabase dev branch and with prod against an empty Postgres, exposes a health endpoint, and CI builds and tests it.",
       "dependsOn": []
     },
     {
@@ -49,7 +49,7 @@
       "title": "Backend common utilities",
       "area": "backend",
       "size": "M",
-      "summary": "Cross-cutting backend foundation: security filter chain with JWT verification and current-user principal, users table, global error handling per the shared error model, request validation, SpringDoc with an exported OpenAPI spec, and test helpers for authenticated requests.",
+      "summary": "Cross-cutting backend foundation: security filter chain with JWT verification and current-user principal, users table in the :user module, global error handling per the shared error model, request validation, SpringDoc with an exported OpenAPI spec, and test helpers for authenticated requests.",
       "doneWhen": "A sample protected endpoint rejects missing/invalid tokens, returns errors in the shared model, and appears in the exported OpenAPI spec; tests can call it as a given user.",
       "dependsOn": [
         "be-scaffolding",

@@ -38,7 +38,7 @@ Cardigan is a Kanban app: each user creates private boards made of columns, and 
 ## Structural approach
 - Behavioral shared specs come first. The wire contract is code-first: each backend feature chunk ships its endpoints in the SpringDoc-generated OpenAPI spec, and clients generate code from it.
 - No fake API layers. Clients build their UI per feature in isolated modules first (screens, ViewModels, repository interfaces on shared domain models, tested with test doubles), then connect each feature once its backend chunk is done.
-- `be-common` owns the users table, JWT verification and the current-user principal, so `be-auth`, `be-boards` and `be-labels` run in parallel.
+- `be-common` builds the users table (in the `:user` module), JWT verification and the current-user principal, so `be-auth`, `be-boards` and `be-labels` run in parallel.
 - Client scaffolding owns app-wide utilities and the core domain models, so parallel UI chunks don't define shared models twice.
 - Every client connect chunk after auth depends on that client's `*-auth-connect`, because protected endpoints need a real session.
 - Development and connect chunks run against a local backend and local Postgres. `infra-vps` is deliberately last and includes the production smoke test of both clients.
