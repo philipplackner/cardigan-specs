@@ -1,49 +1,45 @@
-# API contract
+# Behavioral shared specs
 
 | | |
 |---|---|
 | ID | `api-contract` |
-| Area | API Contract |
+| Area | Shared Specs |
 | Size | M |
 | Wave | 1 |
 | Depends on | none |
-| Unlocks | `be-auth`, `mob-fake-api`, `web-fake-api` |
+| Unlocks | `be-common` |
 
 ## Goal
-REST contract (e.g. OpenAPI) for auth, boards, columns, cards, labels, ordering and board import/export, including the shared error model and the JSON export format.
+Cross-platform behavioral specs (OpenSpec) for the domain model, text limits, ordering, auth, boards, columns, cards, labels and board import/export, including the export file format. The wire-level API contract is not part of this: the backend generates it code-first.
 
 ## In scope
-- REST resources and operations for auth (register, login, refresh, logout), boards, columns, cards, labels, card/column ordering and board import/export
-- Shared error model (validation errors, auth errors, not found, conflicts)
+- Behavioral specs per feature in OpenSpec (`shared-specs-only` schema): auth, boards, columns, cards, labels, ordering, import/export
+- Already done: `text-length`, `domain-user`, `domain-board`, `domain-column`, `domain-card`, `domain-label`, `domain-ordering`
+- Shared error categories (validation, unauthorized, not found, conflict) at the behavioral level
 - Versioned JSON export format for a complete board
-- Auth conventions: how access and refresh tokens are sent and returned
 
 ## Out of scope
-- Implementing the contract on any platform (backend chunks, fake API layers)
+- Wire-level API contract (endpoints, DTOs): generated code-first by the backend feature chunks
+- Implementation on any platform
 
 ## Builds on
-- Nothing (root chunk; greenfield repo)
+- Nothing (root chunk)
 
 ## Provides
-- The spec all backend chunks implement and both fake API layers mirror
-- The export file format used by import/export chunks
+- The behavior every backend feature and every client UI/connect chunk implements
+- Domain rules the client scaffolding chunks turn into core domain models
 
 ## Done when
-- Spec passes a linter/validator
-- Every v1 operation incl. error responses is described
-- Reviewed against the v1 scope in OVERVIEW.md
+- Every v1 feature has a shared spec covering normal and error behavior
+- Specs are archived into `openspec/specs/`
 
 ## Decisions from the breakdown
+- The wire contract is code-first: the backend generates the OpenAPI spec with SpringDoc, clients generate code from it. Behavioral rules come from the shared specs in this repo.
 - Custom JWT auth: 15-minute access tokens, 30-day refresh tokens (user decision). Supabase Auth is not used.
-- Boards and labels are private per user; no sharing or members in v1.
-- Search & filter is client-side only, so the contract has no search endpoint.
-- Import/export are one blocking request each (upload / download), no async jobs.
+- Boards and labels are private per user; no sharing in v1.
+- Search & filter is client-side only; import/export are one blocking request each.
 
 ## Open questions for the deep-dive session
-- Spec format and tooling (OpenAPI 3.x? code generation for clients/backend or hand-written?)
-- Ordering representation for columns and cards (integer positions, fractional ranks, or explicit move operations with target index)
-- Card fields beyond title, description and labels (e.g. due date, priority)?
+- Refresh token transport on web (httpOnly cookie vs. body) vs. mobile
 - Do board reads return the full board (columns + cards + labels) in one call?
-- Refresh token transport for web (httpOnly cookie vs. body) vs. mobile
-- Export format versioning and how imported label conflicts are handled (reuse by name vs. always create)
-- Pagination needs (probably none for v1)
+- Export format versioning and label handling on import (reuse by name vs. create)

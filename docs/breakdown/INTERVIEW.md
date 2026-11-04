@@ -56,3 +56,28 @@ Started 2026-10-16.
 
 ## Phase 5–6 — Files written
 - 32 chunk files in `chunks/`, `OVERVIEW.md`, `graph.json`, `graph.html` (generated, viewer verified to render without errors).
+
+## Revision 1 — Code-first contract, no fakes (2026-11-04)
+
+### Context found
+- The `api-contract` chunk has turned into behavioral shared specs in this repo (OpenSpec, `shared-specs-only` schema): `text-length`, `domain-user`, `domain-board`, `domain-column`, `domain-card`, `domain-label`, `domain-ordering`. Several former open questions are now settled there (per-user labels with 20 palette colors, dense positions 0..n-1, last write wins, permanent cascading deletes, board keys and card display IDs, text limits).
+
+### User decisions (from the request)
+- The wire-level API contract is code-first: the backend generates it with SpringDoc per feature. The behavioral shared specs stay the cross-platform contract (wave 1 unchanged).
+- Fake API layer chunks are removed on both clients.
+- New backend-wide utility chunk in wave 2 (`be-common`): security filter chain, SpringDoc, and the other cross-cutting pieces every backend feature needs.
+- VPS infrastructure & deployment moves to the end of the plan. Development runs against a local backend and local Postgres until then.
+- `be-auth` moves from wave 2 to wave 3.
+- Wave 3: build the whole client UI per feature in parallel on mobile and web, using isolated feature modules.
+- Wave 4: connect the clients to the real backend auth. Further features are connected per feature afterwards.
+
+### Challenges raised and answers
+- Backend would become the critical path if strictly sequential. → `be-common` also owns the users table, JWT verification and the current-user principal. `be-auth` (register/login/refresh/logout), `be-boards` and `be-labels` run in parallel in wave 3. `be-cards` (incl. attaching labels) follows, then `be-import-export`.
+- UI vs. connect boundary. → UI chunks build screens, ViewModels and the feature's repository interface with domain models from the shared specs, tested with test doubles. Connect chunks add DTOs, remote data sources and mapping.
+- Client contract consumption. → Clients generate code from the OpenAPI spec SpringDoc exports. New foundation chunk per client (`*-api-client`, wave 3): codegen, HTTP client config, shared error model mapping, base URL per environment. The HTTP client base moves out of the scaffolding chunks.
+- Infra timing. → Final wave, after all client and backend chunks. Done when both clients pass a smoke test against production.
+- Not raised as a question, explained to the user: card drag & drop and search/filter live inside the board view, so they depend on the board view UI and land in wave 4. Every connect chunk after auth depends on that client's auth-connect, because protected endpoints need a real session.
+- Accepted risk: first production deploy happens last (TLS, cookies, iOS ATS, Supabase pooler surface late).
+- Client-wide utilities (result/error types, base MVI classes, DI, dispatchers, logging, UiText) go into the client scaffolding chunks, not a separate wave-2 chunk (user decision): too small to stand alone, and a separate chunk would delay the wave-3 UI chunks. Mapping the backend error model onto these types stays in `*-api-client`.
+- Client scaffolding chunks also own a core domain module: Board, Column, Card, Label and User models plus `text-length` counting and field limits (user decision). Prevents parallel wave-3 UI chunks from defining shared models twice. No edge from `api-contract`: the domain and text-length specs are already merged.
+- Approval gate 2 passed for revision 1 (41 chunks, 7 waves). Old chunk files (fake API layers, integration chunks, combined feature chunks) replaced.
