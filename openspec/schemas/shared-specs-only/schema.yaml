@@ -7,11 +7,11 @@ artifacts:
     description: Decisions settled by interviewing the user before any planning is written
     template: decisions.md
     instruction: |
-      Run the spec-review skill for this change. The skill interviews the user
+      Run the careful-planning skill for this change. The skill interviews the user
       in rounds with the AskUserQuestion tool, looks up facts itself, and
       writes decisions.md only after the user has confirmed the shared
       understanding. Do not write the file by hand and do not answer questions
-      on the user's behalf. If the spec-review skill is not available, stop
+      on the user's behalf. If the careful-planning skill is not available, stop
       and tell the user instead of writing decisions.md yourself.
 
       This store holds specs shared across platforms, so the interview settles
@@ -35,7 +35,7 @@ artifacts:
 
       Base the proposal on decisions.md. Do not introduce behavior that
       contradicts it or that it does not cover; if something is missing,
-      stop and run the spec-review skill again for the open point.
+      stop and run the careful-planning skill again for the open point.
 
       Sections:
       - **Breaking Change**: Always first. Write `Yes` or `No`. If `Yes`, start
@@ -83,7 +83,7 @@ artifacts:
 
       Base the specs on the proposal and decisions.md. Do not introduce
       behavior that contradicts decisions.md or that it does not cover; if
-      something is missing, stop and run the spec-review skill again for the
+      something is missing, stop and run the careful-planning skill again for the
       open point.
 
       Good spec content:
