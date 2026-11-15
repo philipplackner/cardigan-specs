@@ -120,7 +120,11 @@ Every value in the file, except `exportedAt`, `createdAt` and `updatedAt`, SHALL
 - **THEN** the response is 422 `INVALID_EXPORT_FILE` with an empty `fieldErrors`
 
 #### Scenario: Unknown color
-- **WHEN** a file label has the color `Magenta`
+- **WHEN** a file label has the color `MAGENTA`
+- **THEN** the response is 422 `INVALID_EXPORT_FILE` with an empty `fieldErrors`
+
+#### Scenario: Color in the wrong letter case
+- **WHEN** a file label has the color `Teal`
 - **THEN** the response is 422 `INVALID_EXPORT_FILE` with an empty `fieldErrors`
 
 ### Requirement: Missing and wrong-typed values in the file
@@ -180,12 +184,12 @@ Every name in a card's `labels` SHALL match, by case-folded name, a label in the
 A file label whose case-folded name equals the name of one of the current user's labels SHALL map to that existing label, which keeps its current name and color. Every other file label SHALL be created for the user with the name and color from the file.
 
 #### Scenario: Existing label reused
-- **WHEN** the user has the label `bug` colored `Blue` and the file has `Bug` colored `Red`
-- **THEN** imported cards carry the existing `bug` label, which stays `Blue`, and no new label is created
+- **WHEN** the user has the label `bug` colored `BLUE` and the file has `Bug` colored `RED`
+- **THEN** imported cards carry the existing `bug` label, which stays `BLUE`, and no new label is created
 
 #### Scenario: New label created
-- **WHEN** the file has the label `Docs` colored `Teal` and the user has no label with that name
-- **THEN** a new label `Docs` with the color `Teal` is created for the user
+- **WHEN** the file has the label `Docs` with `"color": "TEAL"` and the user has no label with that name
+- **THEN** a new label `Docs` with the color `TEAL` is created for the user
 
 ### Requirement: Imported board key and clashes
 The imported board SHALL use the `key` part of the request when it is present, otherwise the file's key. An invalid `key` part SHALL produce 400 `VALIDATION_FAILED` with a field error for `key`. When the `key` part is present, `board.key` in the file SHALL be ignored. When that key is already used by one of the user's boards, the import SHALL fail with 409 `CONFLICT` with a field error for `key` with code `ALREADY_USED`, and nothing SHALL be stored.
