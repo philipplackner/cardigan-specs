@@ -39,6 +39,13 @@ Board overview with create, rename and delete, loading/empty/error states, inten
 - UI chunks build screens, ViewModels and the feature's repository interface on the shared domain models, tested with test doubles. There is no fake API layer (user decision).
 - React + TypeScript, fully responsive (phone to desktop); served as a static build from the same VPS as the backend.
 - No offline cache: every screen loads from the backend; new data only via intentional refresh (no real-time sync).
+- The New board key field reuses the board key error strings and the local key check that web import/export defines (user decision). They currently live in cardigan-frontend's `transfer` namespace (`src/features/transfer/i18n/en.json`, key group `clash.keyErrors`). `boards` and `transfer` can't import each other, so this chunk moves the strings into `common` or a core namespace and the check into core/utils. A new core module needs the user's approval. Strings:
+  - `REQUIRED`: "Enter a key."
+  - `TOO_SHORT`: "Use at least 2 letters."
+  - `TOO_LONG`: "Use at most 5 letters."
+  - `INVALID_FORMAT`: "Use only the letters A–Z." Any other key field error code shows this message too.
+  - `ALREADY_USED`: "You already have a board with the key {key}." (from Figma)
+- Local key check order: empty → `REQUIRED`, fewer than 2 letters → `TOO_SHORT`, more than 5 → `TOO_LONG`, otherwise any character outside `A`–`Z` → `INVALID_FORMAT` (user decision).
 
 ## Open questions for the deep-dive session
 - List vs. grid on wide screens
