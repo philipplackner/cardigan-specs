@@ -32,6 +32,4 @@ User-defined labels with CRUD, case-insensitive unique names and palette colors.
 
 ## Decisions from the breakdown
 - Shared domain rules (ids, ownership, keys, card numbering, palette, dense positions, last write wins, cascading deletes, text limits) are settled in the shared specs; implement them, don't redecide them.
-
-## Open questions for the deep-dive session
-- Palette representation on the wire (names vs. ids)
+- Palette colors on the wire and in the export file are the upper-case constants `AMBER` … `YELLOW`, case-sensitive, per `domain-label` (user decision).

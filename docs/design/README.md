@@ -34,6 +34,7 @@ Each frame is one `<figure class="g-item">`, preceded by an HTML comment:
 - `data-size`: `phone` (390 wide), `tablet` (834, portrait), `desktop` (1440; tablet landscape uses this layout too).
 - Web (React) and the app (Compose Multiplatform) share these designs. App-only differences are written in the frame notes: pull to refresh instead of the refresh button, the system file picker for import, the share sheet for export.
 - Label colors carry `data-color="Blue"` etc.; the palette is listed in `foundations.html` and `graphite.css` (`--h`/`--s` per color, lightness from `--lab-l` per theme).
+- `data-color` values are display names. The API and the export file use the upper-case constants `AMBER` … `YELLOW` from `domain-label`.
 - Theme: light tokens on `:root`, dark tokens under `prefers-color-scheme: dark` and `[data-theme="dark"]`. The product follows the system theme; there is no in-app setting.
 - Sample content (boards, cards, emails, dates) is illustrative only.
 - Frame notes marked "proposal" are layout choices not yet confirmed as requirements; `index.html` lists them.
