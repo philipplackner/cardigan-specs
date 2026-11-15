@@ -151,7 +151,7 @@ Every reference to a board, column, card or label that does not exist or belongs
 - **THEN** the response is 404 `NOT_FOUND` and no position changes
 
 ### Requirement: Error precedence
-When a request breaks several rules, the backend SHALL report only the first applying rule in this order: rate limit (429); access token (401 `UNAUTHENTICATED`); size (413); media type (415); parsing (400 `MALFORMED_REQUEST`); route and references (404); field validation (400 `VALIDATION_FAILED`, or 422 `INVALID_EXPORT_FILE` for import file content); credentials and refresh tokens (401 `INVALID_CREDENTIALS`, 401 `INVALID_REFRESH_TOKEN`); uniqueness (409).
+When a request breaks several rules, the backend SHALL report only the first applying rule in this order: access token (401 `UNAUTHENTICATED`); size (413); media type (415); parsing (400 `MALFORMED_REQUEST`); rate limit (429); route and references (404); field validation (400 `VALIDATION_FAILED`, or 422 `INVALID_EXPORT_FILE` for import file content); credentials and refresh tokens (401 `INVALID_CREDENTIALS`, 401 `INVALID_REFRESH_TOKEN`); uniqueness (409).
 
 #### Scenario: Missing board and unparseable body
 - **WHEN** a rename for a board that does not exist has an unparseable body
@@ -172,6 +172,14 @@ When a request breaks several rules, the backend SHALL report only the first app
 #### Scenario: Invalid name and used key
 - **WHEN** a board is created with an over-limit name and a used key
 - **THEN** the response is 400 `VALIDATION_FAILED` with a field error for `name`
+
+#### Scenario: Unparseable login over the limit
+- **WHEN** a client over the login limit for an email sends a login request whose body is not valid JSON
+- **THEN** the response is 400 `MALFORMED_REQUEST`
+
+#### Scenario: Invalid register over the limit
+- **WHEN** a client over the register limit for an email sends a register request with a weak password
+- **THEN** the response is 429 `RATE_LIMITED`
 
 ### Requirement: Rate limit is checked before credentials
 On a rate-limited endpoint, a request over the limit SHALL get 429 `RATE_LIMITED` without its credentials or refresh token being evaluated.
