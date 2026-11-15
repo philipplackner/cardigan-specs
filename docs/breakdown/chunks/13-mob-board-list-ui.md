@@ -39,7 +39,7 @@ Board overview with create, rename and delete, loading/empty/error states, inten
 - UI chunks build screens, ViewModels and the feature's repository interface on the shared domain models, tested with test doubles. There is no fake API layer (user decision).
 - Compose Multiplatform, one shared codebase incl. UI, Android + iOS, phone and tablet layouts; no store release in this plan.
 - No offline cache: every screen loads from the backend; new data only via intentional refresh (no real-time sync).
-- The New board key field reuses the board key error strings and the local key check that `mob-import-export-ui` defines in its transfer feature (CardiganApp change `add-transfer-ui`) (user decision). This chunk moves the strings to `:core:presentation` and the check to `:core:domain`. Strings:
+- The New board key field reuses the board key check and its error strings from core (user decision): `BoardKeyRule` and `BoardKeyError` in `:core:domain`, the strings and `BoardKeyError.toUiText()` in `:core:presentation`. Nothing has to move. Strings:
   - `REQUIRED`: "Enter a key."
   - `TOO_SHORT`: "Use at least 2 letters."
   - `TOO_LONG`: "Use at most 5 letters."
