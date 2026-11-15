@@ -44,9 +44,10 @@ Cross-cutting backend foundation: security filter chain with JWT verification an
 - The wire contract is code-first: the backend generates the OpenAPI spec with SpringDoc, clients generate code from it. Behavioral rules come from the shared specs in this repo.
 - Custom JWT auth: 15-minute access tokens, 30-day refresh tokens (user decision). Supabase Auth is not used.
 - This chunk builds the users table and JWT verification so auth, boards and labels can be built in parallel (user decision). The table's code and schema belong to the `:user` module.
+- JWTs are signed with HS256 and our own secret from a single `JWT_SECRET` env var (user decision). Verification is here, issuing in `be-auth`.
+- Each module has its own migration folder, and migrations use timestamp versions `V<yyyy_MM_dd_HHmm>` so parallel chunks don't clash (user decision).
+- User emails are stored lowercased with a plain unique constraint, per `domain-user` (user decision).
 
 ## Open questions for the deep-dive session
-- JWT signing (HS256 secret vs. RS256 key pair) — verification here, issuing in `be-auth`
 - How the OpenAPI spec is exported and handed to clients (committed file, CI artifact, Gradle task)
 - Error model shape (RFC 9457 problem details?)
-- Migration numbering convention for parallel chunks

@@ -19,6 +19,7 @@ Board screen with columns and card tiles, layouts per screen size, column create
 - Column move buttons
 - Intentional refresh, loading/error states
 - Board/column repository interface
+- Host slot for the export action in the board's ⋯ menu
 
 ## Out of scope
 - Card editing (`web-card-detail-ui`)

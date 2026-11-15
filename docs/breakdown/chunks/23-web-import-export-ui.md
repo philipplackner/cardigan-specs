@@ -35,6 +35,8 @@ Export download and import upload actions with blocking progress and error state
 - React + TypeScript, fully responsive (phone to desktop); served as a static build from the same VPS as the backend.
 - No offline cache: every screen loads from the backend; new data only via intentional refresh (no real-time sync).
 - One blocking request each way (user decision).
+- Export lives only in the board view's ⋯ menu, not in the board list (user decision).
+- After a successful import, the user stays on the board list, which reloads, and sees the toast "Imported “X” with the key <KEY>." There is no navigation to the imported board (user decision).
 
 ## Open questions for the deep-dive session
 - Drag-and-drop file upload area?

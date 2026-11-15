@@ -36,8 +36,9 @@ Export and import actions with blocking progress and error states, plus platform
 - Compose Multiplatform, one shared codebase incl. UI, Android + iOS, phone and tablet layouts; no store release in this plan.
 - No offline cache: every screen loads from the backend; new data only via intentional refresh (no real-time sync).
 - One blocking request each way (user decision).
+- Export lives only in the board view's ⋯ menu, not in the board list (user decision).
+- After a successful import, the user stays on the board list, which reloads, and sees the toast "Imported “X” with the key <KEY>." There is no navigation to the imported board (user decision).
 
 ## Open questions for the deep-dive session
 - Share sheet vs. save-to-files
 - File picker library vs. custom expect/actual
-- Navigate to the imported board afterwards?

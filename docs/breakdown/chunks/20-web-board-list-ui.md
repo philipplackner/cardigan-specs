@@ -18,7 +18,7 @@ Board overview with create, rename and delete, loading/empty/error states, inten
 - Loading, empty and error states
 - Intentional refresh
 - Boards repository interface
-- Host slots for import/export actions
+- Host slot for the import action (export lives in the board view)
 
 ## Out of scope
 - Board contents (`web-board-view-ui`)

@@ -309,7 +309,7 @@
       "title": "Mobile import/export connect",
       "area": "mobile",
       "size": "S",
-      "summary": "Real import/export calls wired to the file handling, hosted in the board list.",
+      "summary": "Real import/export calls wired to the file handling; export in the board view's ⋯ menu, import in the board list.",
       "doneWhen": "Exporting a board and importing the file works against the local backend.",
       "dependsOn": [
         "mob-boards-connect",
@@ -498,7 +498,7 @@
       "title": "Web import/export connect",
       "area": "web",
       "size": "S",
-      "summary": "Real import/export calls wired to the file handling, hosted in the board list.",
+      "summary": "Real import/export calls wired to the file handling; export in the board view's ⋯ menu, import in the board list.",
       "doneWhen": "Exporting a board and importing the file works against the local backend.",
       "dependsOn": [
         "web-boards-connect",
