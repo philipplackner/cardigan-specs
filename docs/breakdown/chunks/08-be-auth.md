@@ -36,10 +36,10 @@ Registration, login, refresh and logout: password hashing, issuing 15-minute JWT
 ## Decisions from the breakdown
 - Custom JWT auth: 15-minute access tokens, 30-day refresh tokens (user decision). Supabase Auth is not used.
 - Shared domain rules (ids, ownership, keys, card numbering, palette, dense positions, last write wins, cascading deletes, text limits) are settled in the shared specs; implement them, don't redecide them.
+- Login and register are rate limited per email only, with separate counts and no client IP limits. Refresh and logout are not rate limited, per `api-auth-tokens` (user decision).
 
 ## Open questions for the deep-dive session
 - bcrypt vs. argon2 and parameters
 - Refresh token reuse detection (revoke the token family?)
 - Logout from one device vs. all devices
-- Login rate limiting
 - Cleanup of expired refresh tokens
